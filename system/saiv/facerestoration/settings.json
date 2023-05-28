@@ -1,0 +1,8 @@
+{
+  "baseTune": "a34x",
+  "version": "2",
+  "set_bv_min": -0.3,
+  "set_bv_max": 0.2,
+  "set_bv_th": -3.5,
+  "set_face_count": 1
+}
