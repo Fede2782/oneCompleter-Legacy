@@ -1,5 +1,5 @@
 {
-  "baseTune": "a34x",
+  "baseTune": "palette",
   "version": "2",
   "set_bv_min": -0.3,
   "set_bv_max": 0.2,
