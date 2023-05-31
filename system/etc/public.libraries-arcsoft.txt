@@ -5,5 +5,3 @@ libhigh_dynamic_range.arcsoft.so
 libobjectcapture_jni.arcsoft.so
 libobjectcapture.arcsoft.so
 libobjectcapture_jni.arcsoft.so
-libFacialAttributeDetection.arcsoft.so
-libimage_enhancement.arcsoft.so
