@@ -183,7 +183,7 @@
               "dm3s",
               "victory", "zodiac", "winner", "bloomq", "bloomxq", "a52xq", "m62", "a54x", "m54x", 
               "SM-A546D", "SM-A546J", "PCA", "SCG21", "SC-53D",
-              "r8q", "r8s", "a72q", "a82xq", "a71xq", "a51xq", "a71", "a71x", "a51", "a51x", 
+              "r8q", "r8s", "a72q", "a82xq", "a71xq", "a51xq", "a71", "a71x", "a51", "gta4xl", "a51x", 
               "gts7l", "gts7xl", "gts71wifi", "gts7xlwifi", "gts7lwifi",
               "c1q", "c1s", "c2q", "c2s", "f2q", "x1q", "x1s", "y2q", "y2s", "z3q", "z3s", "r5q", "f62",
               "beyond1", "beyond1q", "beyondx", "beyondxq", "beyond2", "beyond2q", "beyond0", "beyond0q",
@@ -335,7 +335,7 @@
             "models_list": [
               "dm3s",
               "b2q", "q2q", "v2q", "a73xq", "gts7xllite", "gts7fewifi", "zodiac", "winner", "victory",
-              "t2q", "p3q", "o1q", "r9q", "r8q", "r8s", "t2s", "p3s", "o1s", "r9s", "m62", "a54x",
+              "t2q", "p3q", "o1q", "r9q", "r8q", "r8s", "t2s", "p3s", "o1s", "r9s", "m62", "a54x", "gta4xl",
               "SM-A546D", "SM-A546J", "PCA", "SCG21", "SC-53D",
               "c1q", "c1s", "c2q", "c2s", "f2q", "x1q", "x1s", "y2q", "y2s", "z3q", "z3s", "r5q", "f62", "m54x",
               "beyond1", "beyond1q", "beyondx", "beyondxq", "beyond2", "beyond2q", "beyond0", "beyond0q",
@@ -456,7 +456,7 @@
             ],
             "models_list": [
               "dm3s",
-              "b2q", "q2q", "v2q", "a73xq", "t2q", "p3q", "o1q", "r9q", "victory", "m54x", "gtact4pro", "gtact4prowifi",
+              "b2q", "q2q", "v2q", "a73xq", "t2q", "p3q", "o1q", "r9q", "victory", "m54x", "gtact4pro", "gta4xl", "gtact4prowifi",
               "r8q", "r8s", "gts7xllite", "gts7fewifi", "zodiac", "winner", "t2s", "p3s", "o1s", "r9s",
               "c1q", "c1s", "c2q", "c2s", "f2q", "x1q", "x1s", "y2q", "y2s", "z3q", "z3s", "r5q", "f62", "m62",
               "beyond1", "beyond1q", "beyondx", "beyondxq", "beyond2", "beyond2q", "beyond0", "beyond0q",
@@ -592,7 +592,7 @@
               ],
               "models_list": [
                 "b0s","b2q", "q2q", "v2q", "m53x", "a73xq", "t2q", "p3q", "o1q", "r9q", "victory", "r8q", "r8s", 
-                "gts7xllite", "gts7fewifi", "zodiac", "winner", "t2s", "p3s", "o1s", "r9s", "c1q", "c1s", "c2q", "c2s", 
+                "gts7xllite", "gta4xl", "gts7fewifi", "zodiac", "winner", "t2s", "p3s", "o1s", "r9s", "c1q", "c1s", "c2q", "c2s", 
                 "f2q", "x1q", "x1s", "y2q", "y2s", "z3q", "z3s", "r5q", "f62", "m62", "a34x", "a54x",
                 "SM-A546D", "SM-A546J", "PCA", "SCG21", "SC-53D",
                 "beyond1", "beyond1q", "beyondx", "beyondxq", "beyond2", "beyond2q", "beyond0", "beyond0q", 
