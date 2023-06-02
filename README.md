@@ -17,11 +17,11 @@ Features Now:
 - ✅ DeX wireless
 - ✅ OCR in Samsung Apps (Gallery, Camera, Capture and more)
 - ✅️ Samsung Tag Service
+- ✅ AR Emoji Features
 
 To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌ DeX on PC
-- ❌ AR Emoji Features
 - ❌ Camera features (like Fun Mode)
 
 Maybe (I don't know how to enable these):
