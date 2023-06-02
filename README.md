@@ -5,6 +5,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 Requiriments:
 - Latest Magisk
 - FWD2 firmware under OXM Multi-CSC
+- Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 
 These amazing features were created by Samsung and all APKs in this module are official and signed by Samsung
 
