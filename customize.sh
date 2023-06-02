@@ -14,10 +14,35 @@ fi
 ui_print "- Extracting module files..."
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH
 
-ui_print "- Now clearing package cache to make everything working..."
+ui_print "- Creating temp directory..."
+mkdir $MODPATH/tmp
+
+ui_print "- Installing large apps..."
+
+ui_print "- Installing AR Emoji Editor..."
+wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
+mkdir $MODPATH/system/priv-app/AREmojiEditor/
+tar -xvf $MODPATH/tmp/AREmojiEditor.tar.gz -C $MODPATH/system/priv-app/AREmojiEditor/
+
+ui_print "- Installing Ar Emoji Stickers..."
+wget -O $MODPATH/tmp/AvatarEmojiSticker.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AvatarEmojiSticker.tar.gz"
+mkdir $MODPATH/system/priv-app/AvatarEmojiSticker/
+tar -xvf $MODPATH/tmp/AvatarEmojiSticker.tar.gz -C $MODPATH/system/priv-app/AvatarEmojiSticker/
+
+ui_print "- Installing AR Emoji..."
+wget -O $MODPATH/tmp/AREmoji.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmoji.tar.gz"
+mkdir $MODPATH/system/priv-app/AREmoji/
+tar -xvf $MODPATH/tmp/AREmoji.tar.gz -C $MODPATH/system/priv-app/AREmoji/
+
+ui_print "- Installing Smart Suggestions..."
+wget -O $MODPATH/tmp/SamsungSmartSuggestions.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungSmartSuggestions.tar.gz"
+mkdir $MODPATH/system/priv-app/SamsungSmartSuggestions/
+tar -xvf $MODPATH/tmp/SamsungSmartSuggestions.tar.gz -C $MODPATH/system/priv-app/SamsungSmartSuggestions/
+
+ui_print "- Now clearing tmp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
+rm -rf $MODPATH/tmp
 
 ui_print "- Setting permissions..."
 set_perm_recursive "$MODPATH" 0 0 0777 0755
 
-rm -rf $MODPATH/.github

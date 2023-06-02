@@ -1,7 +1,10 @@
 libface_landmark.arcsoft.so
+libhumantracking.arcsoft.so
 libFacialStickerEngine.arcsoft.so
 liblow_light_hdr.arcsoft.so
 libhigh_dynamic_range.arcsoft.so
 libobjectcapture_jni.arcsoft.so
 libobjectcapture.arcsoft.so
 libobjectcapture_jni.arcsoft.so
+libFacialAttributeDetection.arcsoft.so
+
