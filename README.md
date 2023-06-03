@@ -2,18 +2,19 @@
 
 You can flash this Magisk module at your own risk. I am not responsible for lost warranty, bootloops, lost data, or any other damage to your device.
 
-Requiriments:
+## Requiriments:
 - Latest Magisk
 - FWD2 firmware under OXM Multi-CSC
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 
-These amazing features were created by Samsung and all APKs in this module are official and signed by Samsung
+## Credits
+These amazing features were created by Samsung and all APKs and libs in this module are official and signed by Samsung. None of this would have been possible if Samsung hadn't created these features.
 
-💡Little tip
+## 💡Little tip
 
 This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will now slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases.  
 
-Features Now:
+## Features Now:
 - ✅️ Object/Shadow/Reflection eraser (manually install latest PhotoEditor 3.2.23.43 if it doesn't work immediatly)
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/)
 - ✅️ Smart Suggestions and Widget
@@ -26,16 +27,16 @@ Features Now:
 - ✅ AR Emoji Features
 - ✅ Camera fun mode
 
-To be added (I'm working on it):
+## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌ DeX on PC
 
-Maybe (I don't know how to enable these):
+## Maybe (I don't know how to enable these):
 - ❓️ Styles feature in Photo Editor
 - ❓️ Tablet as Second screen
 
 Feel free to contribute if you have some ideas or ways to enable or add these features.
 
-Big files are stored here: https://gitlab.com/Fede2782/onecompleter-files/
+Big files are stored here to reduce zip file size: https://gitlab.com/Fede2782/onecompleter-files/
 
 If you want to test new builds immediatly you can download artifacts from Github actions.
