@@ -7,7 +7,7 @@ if [[ "$(getprop ro.build.PDA)" == "P615XXS5FWD2" ]]; then
     echo "Supported software version: P615XXS5FWD2"
 else
     ui_print "Unsupported device or version: '$(getprop ro.build.PDA)'"
-    ui_print "P615XXS5FWD2 requires for this module's version"
+    ui_print "P615XXS5FWD2 required for this module's version"
     abort
 fi
 
