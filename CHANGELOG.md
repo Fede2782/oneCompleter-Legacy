@@ -6,6 +6,7 @@ Make sure you have **at least** 1GB free of storage
 - Bug fixes
 - Fun mode in camera
 - Samsung Weather update (auto check of weather forecast)
+- OTA updates of this module
 
 ## v1.2.0
 - Better install script
