@@ -24,7 +24,7 @@ wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecomple
 mkdir $MODPATH/system/priv-app/AREmojiEditor/
 tar -xvf $MODPATH/tmp/AREmojiEditor.tar.gz -C $MODPATH/system/priv-app/AREmojiEditor/
 
-ui_print "- Installing Ar Emoji Stickers..."
+ui_print "- Installing AR Emoji Stickers..."
 wget -O $MODPATH/tmp/AvatarEmojiSticker.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AvatarEmojiSticker.tar.gz"
 mkdir $MODPATH/system/priv-app/AvatarEmojiSticker/
 tar -xvf $MODPATH/tmp/AvatarEmojiSticker.tar.gz -C $MODPATH/system/priv-app/AvatarEmojiSticker/
