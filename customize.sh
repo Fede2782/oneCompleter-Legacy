@@ -45,7 +45,7 @@ mkdir $MODPATH/system/app/FunModeSDK/
 tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
 
 ui_print "- Installing new Samsung Weather..."
-wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/blob/main/SamsungWeather.tar.gz"
+wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungWeather.tar.gz"
 tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeather/
 
 ui_print "- Now clearing temp files and system cache to make everything working..."
