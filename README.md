@@ -29,6 +29,8 @@ Maybe (I don't know how to enable these):
 - ❓️ Styles feature in Photo Editor
 - ❓️ Tablet as Second screen
 
-Feel free to contribute if you have some ideas or ways to enable or add these features. 
+Feel free to contribute if you have some ideas or ways to enable or add these features.
+
+Big files are stored here: https://gitlab.com/Fede2782/onecompleter-files/
 
 If you want to test new builds immediatly you can download artifacts from Github actions.
