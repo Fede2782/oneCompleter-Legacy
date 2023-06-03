@@ -23,11 +23,11 @@ Features Now:
 - ✅ OCR in Samsung Apps (Gallery, Camera, Capture and more)
 - ✅️ Samsung Tag Service
 - ✅ AR Emoji Features
+- ✅ Camera fun mode
 
 To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌ DeX on PC
-- ❌ Camera features (like Fun Mode)
 
 Maybe (I don't know how to enable these):
 - ❓️ Styles feature in Photo Editor
