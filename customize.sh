@@ -39,7 +39,16 @@ wget -O $MODPATH/tmp/SamsungSmartSuggestions.tar.gz "https://gitlab.com/Fede2782
 mkdir $MODPATH/system/priv-app/SamsungSmartSuggestions/
 tar -xvf $MODPATH/tmp/SamsungSmartSuggestions.tar.gz -C $MODPATH/system/priv-app/SamsungSmartSuggestions/
 
-ui_print "- Now clearing tmp files and system cache to make everything working..."
+ui_print "- Installing Camera Kit by Snapchat (for fun mode)..."
+wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
+mkdir $MODPATH/system/app/FunModeSDK/
+tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
+
+ui_print "- Installing new Samsung Weather..."
+wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/blob/main/SamsungWeather.tar.gz"
+tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeather/
+
+ui_print "- Now clearing temp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
 rm -rf $MODPATH/tmp
 
