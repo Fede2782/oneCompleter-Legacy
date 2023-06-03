@@ -11,6 +11,7 @@ These amazing features were created by Samsung and all APKs in this module are o
 
 Features Now:
 - ✅️ Object/Shadow/Reflection eraser (manually install latest PhotoEditor 3.2.23.43 if it doesn't work immediatly)
+- ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/)
 - ✅️ Smart Suggestions and Widget
 - ✅ HighEnd animations
 - ✅ Camera Privacy toggle
