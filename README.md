@@ -10,6 +10,7 @@ Requiriments:
 These amazing features were created by Samsung and all APKs in this module are official and signed by Samsung
 
 💡Little tip
+
 This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will now slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases.  
 
 Features Now:
