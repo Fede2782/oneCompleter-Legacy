@@ -34,7 +34,6 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ❌ DeX on PC
 
 ## Maybe (I don't know how to enable these):
-- ❓️ Styles feature in Photo Editor
 - ❓️ Tablet as Second screen
 
 Feel free to contribute if you have some ideas or ways to enable or add these features.
