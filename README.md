@@ -1,7 +1,8 @@
 # oneCompleter
 
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
-
+![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
+![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/stable?style=flat-square"/>)
 
 You can flash this Magisk module at your own risk. I am not responsible for lost warranty, bootloops, lost data, or any other damage to your device.
 
