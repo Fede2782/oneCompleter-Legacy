@@ -2,6 +2,10 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v1.3.4
+- Bug fixes
+- New bootanimation, two lines style, used in recent Samsung devices
+
 ## v1.3.1
 - Bug fixes
 - New features in Photo Editor: Styles and erasers
