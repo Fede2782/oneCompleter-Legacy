@@ -14,6 +14,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 - FWD2 firmware under OXM Multi-CSC
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
+- Internet Connection
 
 ## Credits
 These amazing features were created by Samsung and all APKs and libs in this module are official and signed by Samsung. None of this would have been possible if Samsung hadn't created these features.

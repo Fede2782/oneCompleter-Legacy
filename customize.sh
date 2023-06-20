@@ -3,11 +3,11 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXS5FWD2" ]]; then
-    echo "Supported software version: P615XXS5FWD2"
+if [[ "$(getprop ro.build.PDA)" == "P615XXS5FWD2" || "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
+    ui_print "Supported software version: $(getprop ro.build.PDA)"
 else
-    ui_print "Unsupported device or version: '$(getprop ro.build.PDA)'"
-    ui_print "P615XXS5FWD2 required for this module's version"
+    ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
+    ui_print "P615XXS5FWD2 or P610XXS3FWD2 required for this module's version"
     abort
 fi
 
@@ -51,6 +51,18 @@ tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeathe
 ui_print "- Installing AI models for Styles and Erasers in Photo Editor..."
 wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
 tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
+
+if [[ "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
+    ui_print "- Found P610 model"
+    ui_print "- Applying patch...."
+    mv $MODPATH/system/etc/floating_feature_p610.xml $MODPATH/system/etc/floating_feature.xml
+    mv $MODPATH/system/vendor/etc/floating_feature_p610.xml $MODPATH/system/vendor/etc/floating_feature.xml
+else
+    ui_print "- Found P615 model"
+    ui_print "- Cleaning unused files..."
+    rm $MODPATH/system/etc/floating_feature_p610.xml
+    rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
+fi
 
 ui_print "- Now clearing temp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
