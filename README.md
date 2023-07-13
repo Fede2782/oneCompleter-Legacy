@@ -44,10 +44,12 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌ DeX on PC
+- 🟧 Tablet as Second screen (I'm making a shortcut but the is a way to use it)
 
-## Maybe (I don't know how to enable these):
-- ❓️ Tablet as Second screen
+## 💻 Tablet as Second Screen
+Follow this tutorial on YouTube, I'm not the author of this amazing video. https://youtube.com/shorts/WLzi5p27CjI
 
+## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
 
 Big files are stored here to reduce zip file size: https://gitlab.com/Fede2782/onecompleter-files/
