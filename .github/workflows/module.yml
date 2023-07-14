@@ -66,7 +66,7 @@ jobs:
         run: sudo apt-get install --install-recommends zip     
 
       - name: Build module zip
-        run: bash build.sh    
+        run: bash build.sh offline   
 
       - name: Upload module zip
         uses: actions/upload-artifact@v3.1.2
