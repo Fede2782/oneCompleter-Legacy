@@ -41,8 +41,9 @@ function download_offline {
 
 if [[ "$1" == "offline" ]]; then
     echo "Preparing offline installer..."
+    mv customize_offline.sh customize.sh
     download_offline
-    zip -r9 "oneCompleter-$version-offline.zip" . -x build.sh update.json "oneCompleter-$version.zip"
+    zip -r9 "oneCompleter-$version-offline.zip" . -x build.sh update.json "oneCompleter-$version.zip" customize_offline.sh
     zip --delete "oneCompleter-$version-offline.zip" ".git/*" || true
     zip --delete "oneCompleter-$version-offline.zip" ".github/*" || true
     zip --delete "oneCompleter-$version-offline.zip" "img/*" || true
