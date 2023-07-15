@@ -28,7 +28,6 @@ fi
 
 ui_print "- Now clearing temp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
-rm -rf $MODPATH/tmp
 
 ui_print "- Setting permissions..."
 set_perm_recursive "$MODPATH" 0 0 0777 0755
