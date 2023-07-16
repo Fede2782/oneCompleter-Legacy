@@ -48,7 +48,6 @@ if [[ "$1" == "offline" ]]; then
     zip --delete "oneCompleter-$version-offline.zip" ".git/*" || true
     zip --delete "oneCompleter-$version-offline.zip" ".github/*" || true
     zip --delete "oneCompleter-$version-offline.zip" "img/*" || true
-    zip --delete "oneCompleter-$version-offline.zip" "tmp/*" || true
 else
     echo "Completed"
 fi
