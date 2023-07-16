@@ -128,4 +128,5 @@
     <local name="AUTO_FRAMING_CAPTURE_SIZE" value="1280x720" />
     <local name="FRONT_AUTO_FRAMING_CAPTURE_SIZE" value="1280x720" />
     <local name="FRONT_AUTO_FRAMING_SNAPSHOT_SIZE" value="1280x720" />
+    <local name="SUPPORT_INTELLIGENT_RECOGNITION_TIPS" value="true" />
 </resources>
