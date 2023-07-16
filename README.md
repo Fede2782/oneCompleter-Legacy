@@ -37,7 +37,8 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ✅ OCR in Samsung Apps (Gallery, Camera, Capture and more)
 - ✅️ Samsung Tag Service
 - ✅ AR Emoji Features
-- ✅ Camera fun mode
+- ✅ Camera 60fps recording
+- ✅️ Camera fun mode
 - ✅ Styles feature in Photo Editor
 - ✅ Two-lines bootanimation (used in 2021 and older devices)
 
