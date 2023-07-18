@@ -40,7 +40,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ✅️ Camera fun mode
 - ✅ Styles feature in Photo Editor
 - ✅ Two-lines bootanimation (used in 2021 and older devices)
-- ✅️ Elaboration modes 
+- ✅️ Elaboration modes
 
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
