@@ -66,7 +66,7 @@ jobs:
         run: sudo apt-get install --install-recommends zip     
 
       - name: Build module zip
-        run: bash build.sh offline   
+        run: bash build.sh   
 
       - name: Upload online module zip
         uses: actions/upload-artifact@v3.1.2
@@ -74,8 +74,5 @@ jobs:
           name: "oneCompleter-actions"
           path: "oneCompleter-v*-online.zip"
           
-      - name: Upload offline module zip
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: "oneCompleter-actions-offline"
-          path: "oneCompleter-v*-offline.zip"          
+          
+                 
