@@ -2,6 +2,12 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v2.1.0
+- Elaboration modes
+- Galaxy Watch camera controller
+
+Offline builds available
+
 ## v1.3.4
 - Bug fixes
 - New bootanimation, two lines style, used in recent Samsung devices
