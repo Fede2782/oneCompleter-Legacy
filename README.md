@@ -45,7 +45,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌ DeX on PC
-- 🟧 Tablet as Second screen (I'm making a shortcut but the is a way to use it)
+- ❌️ Tablet as Second screen (I'm making a shortcut but the is a way to use it)
 
 ## 💻 Tablet as Second Screen
 Follow this tutorial on YouTube, I'm not the author of this amazing video. https://youtube.com/shorts/WLzi5p27CjI
