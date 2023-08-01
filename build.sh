@@ -10,7 +10,7 @@ MODPATH=$(pwd)
 
 function download_offline {
   mkdir $MODPATH/tmp/
-  
+
   wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
   mkdir $MODPATH/system/priv-app/AREmojiEditor/
   tar -xvf $MODPATH/tmp/AREmojiEditor.tar.gz -C $MODPATH/system/priv-app/AREmojiEditor/
@@ -18,7 +18,7 @@ function download_offline {
   wget -O $MODPATH/tmp/AvatarEmojiSticker.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AvatarEmojiSticker.tar.gz"
   mkdir $MODPATH/system/priv-app/AvatarEmojiSticker/
   tar -xvf $MODPATH/tmp/AvatarEmojiSticker.tar.gz -C $MODPATH/system/priv-app/AvatarEmojiSticker/
-  
+
   wget -O $MODPATH/tmp/AREmoji.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmoji.tar.gz"
   mkdir $MODPATH/system/priv-app/AREmoji/
   tar -xvf $MODPATH/tmp/AREmoji.tar.gz -C $MODPATH/system/priv-app/AREmoji/
@@ -30,12 +30,19 @@ function download_offline {
   wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
   mkdir $MODPATH/system/app/FunModeSDK/
   tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
-  
+
   wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungWeather.tar.gz"
   tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeather/
 
   wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
   tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
+
+  wget -O $MODPATH/tmp/ClockStylesHome.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockStylesHome.tar.gz"
+  tar -xvf $MODPATH/tmp/ClockStylesHome.tar.gz -C $MODPATH/system/priv-app/DressRoom/
+
+  wget -O $MODPATH/tmp/ClockStylesAOD.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockStylesAOD.tar.gz"
+  mkdir $MODPATH/system/priv-app/AODService_v80/
+  tar -xvf $MODPATH/tmp/ClockStylesAOD.tar.gz -C $MODPATH/system/priv-app/AODService_v80/
 
 }
 

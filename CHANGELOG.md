@@ -2,7 +2,7 @@
 
 Make sure you have **at least** 1GB free of storage
 
-## v2.3.0
+## v2.3.1
 - New clock styles in Lockscreen settings 
 
 For this feature I had to add AlwaysOnDisplay in settings. Of course it doesn't work since the display is not an AMOLED
