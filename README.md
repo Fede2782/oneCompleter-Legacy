@@ -27,20 +27,21 @@ Never disable this module because it may create big issues in the system. In thi
 This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
-- ✅️ Object/Shadow/Reflection eraser
-- ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/)
-- ✅️ Smart Suggestions and Widget
-- ✅ HighEnd animations
-- ✅ Camera Privacy toggle
-- ✅️ Google Discover feed
-- ✅ DeX wireless
-- ✅ OCR in Samsung Apps (Gallery, Camera, Capture and more)
-- ✅️ Samsung Tag Service
-- ✅ AR Emoji Features
-- ✅️ Camera fun mode
-- ✅ Styles feature in Photo Editor
-- ✅ Two-lines bootanimation (used in 2021 and older devices)
-- ✅️ Elaboration modes
+-bject/Shadow/Reflection eraser
+-mage Clipper (thanks to ShaDisNX255/NcX-S21FE/)
+-mart Suggestions and Widget
+-HighEnd animations
+-Camera Privacy toggle
+-oogle Discover feed
+-DeX wireless
+-OCR in Samsung Apps (Gallery, Camera, Capture and more)
+-amsung Tag Service
+-AR Emoji Features
+-amera fun mode
+-Styles feature in Photo Editor
+-Two-lines bootanimation (used in 2021 and older devices)
+-laboration modes
+-Preview clock styles of next One I
 
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
