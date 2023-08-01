@@ -28,7 +28,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 
 ## Features Now:
 
-- ✅️ Object/Shadow/Reflection eraser 
+- ✅️ Object/Shadow/Reflection eraser* 
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
 - ✅️ Smart Suggestions and Widget 
 - ✅️ HighEnd animations 
@@ -43,6 +43,8 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
 - ✅️ Elaboration modes 
 - ✅️ Clock styles of next One UI 
+
+*if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
 
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
