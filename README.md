@@ -11,7 +11,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 ## Requiriments:
 - Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
 - Latest Magisk
-- FWD2 firmware under OXM Multi-CSC
+- FWH2 or FWG4 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
 - Internet Connection (not necessary if using offline installer)
