@@ -19,6 +19,12 @@ mkdir $MODPATH/tmp
 
 ui_print "- Installing large apps..."
 
+#REMOTE vers
+#SmartSuggestions 5.2.00.66
+#AREmojiStickers 5.2.00.26
+#AREmojiEditor 5.2.00.8
+#AREmoji 7.5.00.12
+
 ui_print "- Installing AR Emoji Editor..."
 wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
 mkdir $MODPATH/system/priv-app/AREmojiEditor/
