@@ -58,6 +58,19 @@ ui_print "- Installing AI models for Styles and Erasers in Photo Editor..."
 wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
 tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
 
+ui_print "- Installing HashTag Service..."
+wget -O $MODPATH/tmp/HashTagService.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/HashTagService.tar.gz"
+mkdir $MODPATH/system/priv-app/HashTagService
+tar -xvf $MODPATH/tmp/HashTagService.tar.gz -C $MODPATH/system/priv-app/HashTagService/
+
+ui_print "- Installing Clock Pack..."
+wget -O $MODPATH/tmp/ClockPack_v80.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockPack_v80.tar.gz"
+tar -xvf $MODPATH/tmp/ClockPack_v80.tar.gz -C $MODPATH/system/priv-app/ClockPack_v80/
+
+ui_print "- Installing Styles and Wallpaper..."
+wget -O $MODPATH/tmp/DressRoom.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/DressRoom.tar.gz"
+tar -xvf $MODPATH/tmp/DressRoom.tar.gz -C $MODPATH/system/priv-app/DressRoom/
+
 if [[ "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
     ui_print "- Found P610 model"
     ui_print "- Applying patch...."
