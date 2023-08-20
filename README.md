@@ -43,7 +43,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
 - ✅️ Elaboration modes 
 - ✅️ Clock styles of next One UI 
-- ✅️ Cablet as second screen feature
+- ✅️ Tablet as second screen feature
 
 *if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
 
