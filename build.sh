@@ -37,13 +37,6 @@ function download_offline {
   wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
   tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
 
-  wget -O $MODPATH/tmp/ClockStylesHome.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockStylesHome.tar.gz"
-  tar -xvf $MODPATH/tmp/ClockStylesHome.tar.gz -C $MODPATH/system/priv-app/DressRoom/
-
-  wget -O $MODPATH/tmp/ClockStylesAOD.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockStylesAOD.tar.gz"
-  mkdir $MODPATH/system/priv-app/AODService_v80/
-  tar -xvf $MODPATH/tmp/ClockStylesAOD.tar.gz -C $MODPATH/system/priv-app/AODService_v80/
-
 }
 
 if [[ "$1" == "offline" ]]; then
