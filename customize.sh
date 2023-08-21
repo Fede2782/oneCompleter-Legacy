@@ -83,6 +83,13 @@ else
     rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
 fi
 
+ui_print "- Force enabling features: SecondScreen and SmartSuggestions..."
+touch /data/adb/service.d/secondscreen.sh
+echo "watch -n 60 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.player.SecondScreenActivity >> /dev/null" >> /data/adb/service.d/secondscreen.sh
+chmod +x /data/adb/service.d/secondscreen.sh
+chmod +x $MODPATH/service.sh
+
+
 ui_print "- Now clearing temp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
 rm -rf $MODPATH/tmp
