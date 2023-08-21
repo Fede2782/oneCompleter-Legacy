@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <config>
         <allow-association target="com.samsung.android.smartsuggestions" allowed="com.android.providers.contacts" />
         <allow-association target="com.samsung.android.smartsuggestions" allowed="com.android.providers.media" />
