@@ -2,6 +2,9 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v3.0.2
+- Fixed a bug where the SmartSuggestions widget was hidden
+
 ## v3.0.0
 - Stable Clock styles, no more AOD
 - Finally added Tablet as Second screen. To use it just go in Settings and connected devices
