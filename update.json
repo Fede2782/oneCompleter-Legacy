@@ -1,6 +1,6 @@
 {
-    "version": "v3.0.0",
-    "versionCode": 30000,
-    "zipUrl": "https://github.com/Fede2782/oneCompleter/releases/download/v3.0.0/oneCompleter-v3.0.0-online.zip",
+    "version": "v3.0.2",
+    "versionCode": 30020,
+    "zipUrl": "https://github.com/Fede2782/oneCompleter/releases/download/v3.0.2/oneCompleter-v3.0.2-online.zip",
     "changelog": "https://github.com/Fede2782/oneCompleter/raw/stable/CHANGELOG.md"
 }
