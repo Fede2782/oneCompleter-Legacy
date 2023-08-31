@@ -50,6 +50,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌️ DeX on PC
+- ❌️ AI 24h Timelapse
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
