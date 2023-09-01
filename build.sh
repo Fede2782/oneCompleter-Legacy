@@ -19,6 +19,10 @@ function download_offline {
   mkdir $MODPATH/system/priv-app/AvatarEmojiSticker/
   tar -xvf $MODPATH/tmp/AvatarEmojiSticker.tar.gz -C $MODPATH/system/priv-app/AvatarEmojiSticker/
 
+  wget -O $MODPATH/tmp/HashTagService.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/HashTagService.tar.gz"
+  mkdir $MODPATH/system/priv-app/HashTagService/
+  tar -xvf $MODPATH/tmp/HashTagService.tar.gz -C $MODPATH/system/priv-app/HashTagService/
+
   wget -O $MODPATH/tmp/AREmoji.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmoji.tar.gz"
   mkdir $MODPATH/system/priv-app/AREmoji/
   tar -xvf $MODPATH/tmp/AREmoji.tar.gz -C $MODPATH/system/priv-app/AREmoji/
@@ -37,6 +41,15 @@ function download_offline {
   wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
   tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
 
+  wget -O $MODPATH/tmp/ClockPack_v80.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockPack_v80.tar.gz"
+  tar -xvf $MODPATH/tmp/ClockPack_v80.tar.gz -C $MODPATH/system/priv-app/ClockPack_v80/
+
+  wget -O $MODPATH/tmp/DressRoom.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/DressRoom.tar.gz"
+  tar -xvf $MODPATH/tmp/DressRoom.tar.gz -C $MODPATH/system/priv-app/DressRoom/
+
+  wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
+  mkdir $MODPATH/system/app/FunModeSDK/
+  tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
 }
 
 if [[ "$1" == "offline" ]]; then
