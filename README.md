@@ -1,5 +1,8 @@
 # oneCompleter
 
+
+## ONE UI 5.1.1 BROKE EVERYTHING (EVERYTHING). DO NOT UPDATE IF YOU USE THIS MODULE. I'LL INVESTIGATE AND DO THE NECESSARY. IF YOU WANT TO UPDATE YOU MUST DISABLE THE MODULE SINCE IT DOESN'T WORK ANYMORE ON ONE UI 5.1.1
+
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
 ![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
 ![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/stable?style=flat-square"/>)
