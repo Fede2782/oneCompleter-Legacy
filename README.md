@@ -43,7 +43,6 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
 - ✅️ Elaboration modes 
 - ✅️ Clock styles of next One UI 
-- ✅️ Tablet as second screen feature
 
 *if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
 
@@ -51,6 +50,7 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 - ❌️ Photo remaster (full version)
 - ❌️ DeX on PC
 - ❌️ AI 24h Timelapse
+- ❌️ Tablet as Second screen (Samsung blocked it again, this time is almost impossible)
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
