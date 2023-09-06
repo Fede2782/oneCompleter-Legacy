@@ -2,6 +2,10 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v3.5.0
+- Fixed bugs
+- Added support for One UI 5.1.1
+
 ## v3.0.2
 - Fixed a bug where the SmartSuggestions widget was hidden
 
