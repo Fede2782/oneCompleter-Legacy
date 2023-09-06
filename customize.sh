@@ -40,11 +40,6 @@ wget -O $MODPATH/tmp/AREmoji.tar.gz "https://gitlab.com/Fede2782/onecompleter-fi
 mkdir $MODPATH/system/priv-app/AREmoji/
 tar -xvf $MODPATH/tmp/AREmoji.tar.gz -C $MODPATH/system/priv-app/AREmoji/
 
-ui_print "- Installing Smart Suggestions..."
-wget -O $MODPATH/tmp/SamsungSmartSuggestions.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungSmartSuggestions.tar.gz"
-mkdir $MODPATH/system/priv-app/SamsungSmartSuggestions/
-tar -xvf $MODPATH/tmp/SamsungSmartSuggestions.tar.gz -C $MODPATH/system/priv-app/SamsungSmartSuggestions/
-
 ui_print "- Installing Camera Kit by Snapchat (for fun mode)..."
 wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
 mkdir $MODPATH/system/app/FunModeSDK/
