@@ -27,6 +27,7 @@ ui_print "- Installing large apps..."
 
 ui_print "- Installing AR Emoji Editor..."
 wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
+mkdir $MODPATH/system/priv-app/
 mkdir $MODPATH/system/priv-app/AREmojiEditor/
 tar -xvf $MODPATH/tmp/AREmojiEditor.tar.gz -C $MODPATH/system/priv-app/AREmojiEditor/
 
