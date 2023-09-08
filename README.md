@@ -1,7 +1,7 @@
 # oneCompleter
 
+## ONE UI 5.1.1 work in progress. Samsung changed many things in this firmware and I need to optimize this module to fit the new One UI version. Some features have been integrated into stock rom like OCR or Smart Suggestions (not Widget unfortunatly)
 
-## ONE UI 5.1.1 BROKE EVERYTHING (EVERYTHING). DO NOT UPDATE IF YOU USE THIS MODULE. I'LL INVESTIGATE AND DO THE NECESSARY. IF YOU WANT TO UPDATE YOU MUST DISABLE THE MODULE SINCE IT DOESN'T WORK ANYMORE ON ONE UI 5.1.1
 
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
 ![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
@@ -14,7 +14,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 ## Requiriments:
 - Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
 - Latest Magisk
-- FWH2 or FWG4 firmware under OXM Multi-CSC (depending on model)
+- FWH7 or (not out yet for P610) firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
 - Internet Connection (not necessary if using offline installer)
