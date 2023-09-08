@@ -10,6 +10,7 @@ MODPATH=$(pwd)
 
 function download_offline {
   mkdir $MODPATH/tmp/
+  mkdir $MODPATH/system/priv-app/
 
   wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
   mkdir $MODPATH/system/priv-app/AREmojiEditor/
@@ -36,12 +37,6 @@ function download_offline {
 
   wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
   tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
-
-  wget -O $MODPATH/tmp/ClockPack_v80.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/ClockPack_v80.tar.gz"
-  tar -xvf $MODPATH/tmp/ClockPack_v80.tar.gz -C $MODPATH/system/priv-app/ClockPack_v80/
-
-  wget -O $MODPATH/tmp/DressRoom.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/DressRoom.tar.gz"
-  tar -xvf $MODPATH/tmp/DressRoom.tar.gz -C $MODPATH/system/priv-app/DressRoom/
 
   wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
   mkdir $MODPATH/system/app/FunModeSDK/
