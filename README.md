@@ -30,30 +30,26 @@ Never disable this module because it may create big issues in the system. In thi
 This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
+Since One UI 5.1.1 many features have been integrated in stock firmware and have been removed from oneCompleter for better stability
 
 - ✅️ Object/Shadow/Reflection eraser* 
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
-- ✅️ Smart Suggestions and Widget 
+- mart Suggestions Widget 
 - ✅️ HighEnd animations 
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
-- ✅️ DeX wireless 
-- ✅️ OCR in Samsung Apps (Gallery, Camera, Capture and more) 
 - ✅️ Samsung Tag Service 
 - ✅️ AR Emoji Features 
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
-- ✅️ Elaboration modes 
-- ✅️ Clock styles of next One UI 
-
+- Tablet as Second screen
 *if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
 
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
 - ❌️ DeX on PC
 - ❌️ AI 24h Timelapse
-- ❌️ Tablet as Second screen (Samsung blocked it again, this time is almost impossible)
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
