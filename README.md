@@ -32,9 +32,9 @@ This module installs some big apps and libs. I suggest you to use Galaxy App Boo
 ## Features Now:
 Since One UI 5.1.1 many features have been integrated in stock firmware and have been removed from oneCompleter for better stability
 
-- ✅️ Object/Shadow/Reflection eraser* 
+- ✅️ Object/Shadow/Reflection eraser
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
-- mart Suggestions Widget 
+- ✅️ Smart Suggestions Widget 
 - ✅️ HighEnd animations 
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
@@ -43,12 +43,11 @@ Since One UI 5.1.1 many features have been integrated in stock firmware and have
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
-- Tablet as Second screen
-*if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
+- ✅️ Tablet as Second screen
 
 ## To be added (I'm working on it):
 - ❌️ Photo remaster (full version)
-- ❌️ DeX on PC
+- ❌️ DeX on PC/Wireless
 - ❌️ AI 24h Timelapse
 
 ## Other Info
