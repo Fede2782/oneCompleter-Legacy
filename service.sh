@@ -4,4 +4,4 @@ if [[ $qsettings != *ScreenSharing* ]]; then
 else
     sleep 1
 fi
-
+watch -n 60 pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider
