@@ -35,10 +35,11 @@ libFacePreProcessing_jni.camera.samsung.so
 libhumantracking_util.camera.samsung.so
 libhumantracking_util.camera.samsung.so
 libMyFilterPlugin.camera.samsung.so
+libMyFilterPlugin.camera.samsung.so
 libsecjpeginterface.camera.samsung.so
 libsurfaceutil.camera.samsung.so
 libcore2nativeutil.camera.samsung.so
 libsecimaging_pdk.camera.samsung.so
 libsecimaging.camera.samsung.so
-libFaceRestoration.camera.samsung.so
 libsupernight_wrapper_v3.camera.samsung.so
+libFaceRestoration.camera.samsung.so
