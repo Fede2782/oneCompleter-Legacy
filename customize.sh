@@ -27,6 +27,7 @@ ui_print "- Installing large apps..."
 
 ui_print "- Installing AR Emoji Editor..."
 wget -O $MODPATH/tmp/AREmojiEditor.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/AREmojiEditor.tar.gz"
+mkdir $MODPATH/system/app/
 mkdir $MODPATH/system/priv-app/
 mkdir $MODPATH/system/priv-app/AREmojiEditor/
 tar -xvf $MODPATH/tmp/AREmojiEditor.tar.gz -C $MODPATH/system/priv-app/AREmojiEditor/
@@ -46,9 +47,9 @@ wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter
 mkdir $MODPATH/system/app/FunModeSDK/
 tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
 
-ui_print "- Installing new Samsung Weather..."
-wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungWeather.tar.gz"
-tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeather/
+#ui_print "- Installing new Samsung Weather..."
+#wget -O $MODPATH/tmp/SamsungWeather.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/SamsungWeather.tar.gz"
+#tar -xvf $MODPATH/tmp/SamsungWeather.tar.gz -C $MODPATH/system/app/SamsungWeather/
 
 ui_print "- Installing AI models for Styles and Erasers in Photo Editor..."
 wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
