@@ -3,11 +3,11 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXU7FWH7" || "$(getprop ro.build.PDA)" == "P610XXS4FWG4" ]]; then
+if [[ "$(getprop ro.build.PDA)" == "P615XXU7FWH7" || "$(getprop ro.build.PDA)" == "P610XXU4FWH7" ]]; then
     ui_print "Supported software version: $(getprop ro.build.PDA)"
 else
     ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
-    ui_print "P615XXU7FWH7 or P610XXS4FWG4 required for this module's version"
+    ui_print "P615XXU7FWH7 or P610XXU4FH7 required for this module's version"
     abort
 fi
 
@@ -60,17 +60,22 @@ wget -O $MODPATH/tmp/HashTagService.tar.gz "https://gitlab.com/Fede2782/onecompl
 mkdir $MODPATH/system/priv-app/HashTagService
 tar -xvf $MODPATH/tmp/HashTagService.tar.gz -C $MODPATH/system/priv-app/HashTagService/
 
-if [[ "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
-    ui_print "- Found P610 model"
-    ui_print "- Applying patch...."
-    mv $MODPATH/system/etc/floating_feature_p610.xml $MODPATH/system/etc/floating_feature.xml
-    mv $MODPATH/system/vendor/etc/floating_feature_p610.xml $MODPATH/system/vendor/etc/floating_feature.xml
-else
-    ui_print "- Found P615 model"
-    ui_print "- Cleaning unused files..."
-    rm $MODPATH/system/etc/floating_feature_p610.xml
-    rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
-fi
+ui_print "- Installing Full Photo Editor..."
+wget -O $MODPATH/tmp/PhotoEditor_Full.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/PhotoEditor_Full.tar.gz"
+mkdir $MODPATH/system/priv-app/PhotoEditor_Full
+tar -xvf $MODPATH/tmp/PhotoEditor_Full.tar.gz -C $MODPATH/system/priv-app/PhotoEditor_Full/
+
+#if [[ "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
+#    ui_print "- Found P610 model"
+#    ui_print "- Applying patch...."
+#    mv $MODPATH/system/etc/floating_feature_p610.xml $MODPATH/system/etc/floating_feature.xml
+#    mv $MODPATH/system/vendor/etc/floating_feature_p610.xml $MODPATH/system/vendor/etc/floating_feature.xml
+#else
+#    ui_print "- Found P615 model"
+#    ui_print "- Cleaning unused files..."
+#    rm $MODPATH/system/etc/floating_feature_p610.xml
+#    rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
+#fi
 
 ui_print "- Finishing the last things..."
 chmod +x $MODPATH/service.sh

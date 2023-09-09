@@ -41,6 +41,11 @@ function download_offline {
   wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
   mkdir $MODPATH/system/app/FunModeSDK/
   tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
+
+  wget -O $MODPATH/tmp/PhotoEditor_Full.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/PhotoEditor_Full.tar.gz"
+  mkdir $MODPATH/system/priv-app/PhotoEditor_Full
+  tar -xvf $MODPATH/tmp/PhotoEditor_Full.tar.gz -C $MODPATH/system/priv-app/PhotoEditor_Full/
+
 }
 
 if [[ "$1" == "offline" ]]; then

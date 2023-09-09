@@ -1,10 +1,13 @@
+
 # oneCompleter Changelog
 
 Make sure you have **at least** 1GB free of storage
 
-## v3.5.0
-- Fixed bugs
-- Added support for One UI 5.1.1
+## v4.0.0
+- Full One UI 5.1.1 support
+- Added Highligh video in Gallery
+- Fixed bugs and improving code and performance
+- General updates to apps and libraries
 
 ## v3.0.2
 - Fixed a bug where the SmartSuggestions widget was hidden
