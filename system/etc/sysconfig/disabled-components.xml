@@ -5,5 +5,9 @@
         <component class="com.samsung.android.smartmirroring.player.SecondScreenActivity" enabled="true" />
         <component class="com.samsung.android.smartmirroring.tile.ScreenSharingTile" enabled="true" />
     </component-override>
+
+    <component-override package="com.samsung.android.smartsuggestions">
+        <component class="com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider" enabled="true" />
+    </component-override>
 </config>
 
