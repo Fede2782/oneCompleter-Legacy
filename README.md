@@ -1,8 +1,5 @@
 # oneCompleter
 
-
-## ONE UI 5.1.1 BROKE EVERYTHING (EVERYTHING). DO NOT UPDATE IF YOU USE THIS MODULE. I'LL INVESTIGATE AND DO THE NECESSARY. IF YOU WANT TO UPDATE YOU MUST DISABLE THE MODULE SINCE IT DOESN'T WORK ANYMORE ON ONE UI 5.1.1
-
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
 ![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
 ![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/stable?style=flat-square"/>)
@@ -11,10 +8,10 @@
 
 You can flash this Magisk module at your own risk. I am not responsible for lost warranty, bootloops, lost data, or any other damage to your device.
 
-## Requiriments:
+## Requirements:
 - Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
 - Latest Magisk
-- FWH2 or FWG4 firmware under OXM Multi-CSC (depending on model)
+- FWH7 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
 - Internet Connection (not necessary if using offline installer)
@@ -23,41 +20,37 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 These amazing features were created by Samsung and all APKs and libs in this module are official and signed by Samsung. None of this would have been possible if Samsung hadn't created these features.
 
 ## ⚠️ Uninstall/Disable and OS updates
-Never disable this module because it may create big issues in the system. In this case install again the module, for example if you have booted in Safe Mode. Moreover, never update One UI/Android version (One Ui 5 -> 5.1, Android 12 -> 13) with module installed, uninstall the module before doing the update and then install again. 
+Never disable this module because it may create big issues in the system. In this case install again the module, for example, if you have booted in Safe Mode. Moreover, never update One UI/Android version (One Ui 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
 
 ## 💡Little tip
 
-This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
+This module installs some big apps and libs. I suggest you use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover, make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
+Since One UI 5.1.1, many features have been integrated in stock firmware and have been removed from oneCompleter for better stability. One UI 5.1.1 really improved performance so this module has been lightened to keep One UI 5.1.1 run smoothly, however, no features have been removed.
 
-- ✅️ Object/Shadow/Reflection eraser* 
+- ✅️ Object/Shadow/Reflection eraser
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
-- ✅️ Smart Suggestions and Widget 
-- ✅️ HighEnd animations 
+- ✅️ Smart Suggestions Widget 
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
-- ✅️ DeX wireless 
-- ✅️ OCR in Samsung Apps (Gallery, Camera, Capture and more) 
 - ✅️ Samsung Tag Service 
 - ✅️ AR Emoji Features 
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
-- ✅️ Two-lines bootanimation (used in 2021 and older devices) 
-- ✅️ Elaboration modes 
-- ✅️ Clock styles of next One UI 
-
-*if not shown install this version: https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-photo-editor/samsung-photo-editor-3-2-23-43-release/samsung-photo-editor-3-2-23-43-android-apk-download/
+- ✅️ Two-line boot animation (used in 2021 and older devices) 
+- ✅️ Tablet as Second screen
+- ✅️ Highlight video maker
 
 ## To be added (I'm working on it):
-- ❌️ Photo remaster (full version)
-- ❌️ DeX on PC
 - ❌️ AI 24h Timelapse
-- ❌️ Tablet as Second screen (Samsung blocked it again, this time is almost impossible)
+- ❌️ Photo remaster (full version)
+- ❌️ DeX on PC/Wireless
+
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
 
 Big files are stored here to reduce zip file size: https://gitlab.com/Fede2782/onecompleter-files/
 
-If you want to test new builds immediatly you can download artifacts from Github actions.
+If you want to test new builds immediately you can download artifacts from Github actions.
