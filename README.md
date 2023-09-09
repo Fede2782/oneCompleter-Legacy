@@ -1,8 +1,5 @@
 # oneCompleter
 
-## ONE UI 5.1.1 work in progress. Samsung changed many things in this firmware and I need to optimize this module to fit the new One UI version. Some features have been integrated into stock rom like OCR or Smart Suggestions (not Widget unfortunatly)
-
-
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
 ![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
 ![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/stable?style=flat-square"/>)
@@ -14,7 +11,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 ## Requiriments:
 - Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
 - Latest Magisk
-- FWH7 or (not out yet for P610) firmware under OXM Multi-CSC (depending on model)
+- FWH7 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
 - Internet Connection (not necessary if using offline installer)
@@ -30,12 +27,11 @@ Never disable this module because it may create big issues in the system. In thi
 This module installs some big apps and libs. I suggest you to use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
-Since One UI 5.1.1 many features have been integrated in stock firmware and have been removed from oneCompleter for better stability
+Since One UI 5.1.1 many features have been integrated in stock firmware and have been removed from oneCompleter for better stability. One UI 5.1.1 really improved performance so this module has been lightened to keep One UI 5.1.1 run smoothly, however no features has been removed.
 
 - ✅️ Object/Shadow/Reflection eraser
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
 - ✅️ Smart Suggestions Widget 
-- ✅️ HighEnd animations 
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
 - ✅️ Samsung Tag Service 
@@ -44,11 +40,13 @@ Since One UI 5.1.1 many features have been integrated in stock firmware and have
 - ✅️ Styles feature in Photo Editor 
 - ✅️ Two-lines bootanimation (used in 2021 and older devices) 
 - ✅️ Tablet as Second screen
+- ✅️ Highlight video maker
 
 ## To be added (I'm working on it):
+- ❌️ AI 24h Timelapse
 - ❌️ Photo remaster (full version)
 - ❌️ DeX on PC/Wireless
-- ❌️ AI 24h Timelapse
+
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
