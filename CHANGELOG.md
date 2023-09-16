@@ -3,6 +3,10 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v4.1.0
+- Bug fixes and improved performance by removing module's not necessary services
+- Fix for Smart Suggestion Widget removing from Home screen after some reboots
+
 ## v4.0.0
 - Full One UI 5.1.1 support
 - Added Highligh video in Gallery
