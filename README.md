@@ -43,7 +43,6 @@ Since One UI 5.1.1, many features have been integrated in stock firmware and hav
 - ✅️ Two-line boot animation (used in 2021 and older devices) 
 - ✅️ Tablet as Second screen
 - ✅️ Highlight video maker
-- ✅️ One UI 6 new font and emojis
 
 ## To be added (I'm working on it):
 - ❌️ AI 24h Timelapse
