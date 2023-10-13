@@ -22,14 +22,14 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 These amazing features were created by Samsung and all APKs and libs in this module are official and signed by Samsung. None of this would have been possible if Samsung hadn't created these features.
 
 ## ⚠️ Uninstall/Disable and OS updates
-Never disable this module because it may create big issues in the system. In this case install again the module, for example, if you have booted in Safe Mode. Moreover, never update One UI/Android version (One Ui 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
+Never disable this module because it may create big issues in the system. In this case install again the modulinto for example, if you have booted in Safe Mode. Moreover, never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
 
 ## 💡Little tip
 
 This module installs some big apps and libs. I suggest you use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover, make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
-Since One UI 5.1.1, many features have been integrated in stock firmware and have been removed from oneCompleter for better stability. One UI 5.1.1 really improved performance so this module has been lightened to keep One UI 5.1.1 run smoothly, however, no features have been removed.
+Since One UI 5.1.1, many features have been integrated in stock firmware and have been removed from oneCompleter for better stability. One UI 5.1.1 really improved performance so this module has been lightened to keep One UI 5.1.1 running smoothly, however, no features have been removed.
 
 - ✅️ Object/Shadow/Reflection eraser
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
@@ -44,10 +44,12 @@ Since One UI 5.1.1, many features have been integrated in stock firmware and hav
 - ✅️ Tablet as Second screen
 - ✅️ Highlight video maker
 
-## To be added (I'm working on it):
-- ❌️ AI 24h Timelapse
-- ❌️ Photo remaster (full version)
-- ❌️ DeX on PC/Wireless
+## Next Updates
+- [] Extra Dim feature
+- [] Photo Remaster
+- [] 24h-AI Timelapse
+
+After these features, oneCompleter won't receive any more features. Between major updates there will be only maintenance updates. 
 
 
 ## Other Info
