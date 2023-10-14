@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <component-override package="com.samsung.android.smartmirroring">     
+    <component-override package="com.samsung.android.smartmirroring">
         <component class="com.samsung.android.smartmirroring.settings.DisableSecondScreenActivity" enabled="false" />
         <component class="com.samsung.android.smartmirroring.player.SecondScreenActivity" enabled="true" />
         <component class="com.samsung.android.smartmirroring.tile.ScreenSharingTile" enabled="true" />
@@ -11,6 +11,12 @@
     <component-override package="com.samsung.android.smartsuggestions">
         <component class="com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider" enabled="true" />
         <component class="com.samsung.android.smartsuggestions.startup.StartupJobService" enabled="false" />
+    </component-override>
+
+    <component-override package="com.samsung.android.forest">
+        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorActivity" enabled="true" />
+        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorOnboardingActivity" enabled="true" />
+        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorSettingActivity" enabled="true" />
     </component-override>
 </config>
 

@@ -3,6 +3,9 @@
 
 Make sure you have **at least** 1GB free of storage
 
+## v4.2.0
+- Add Volume Monitor
+
 ## v4.1.0
 - Bug fixes and improved performance by removing module's not necessary services
 - Try to fix for Smart Suggestion Widget removing from Home screen after some reboots
