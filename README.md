@@ -22,7 +22,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 These amazing features were created by Samsung and all APKs and libs in this module are official and signed by Samsung. None of this would have been possible if Samsung hadn't created these features.
 
 ## ⚠️ Uninstall/Disable and OS updates
-Never disable this module because it may create big issues in the system. In this case install again the modulinto for example, if you have booted in Safe Mode. Moreover, never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
+Never disable this module because it may create big issues in the system. In this case install again the module. If you have booted in Safe Mode you should reinstall it too. Moreover, never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
 
 ## 💡Little tip
 
