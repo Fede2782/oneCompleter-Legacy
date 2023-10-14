@@ -48,6 +48,7 @@ Since One UI 5.1.1, many features have been integrated in stock firmware and hav
 - [ ] Extra Dim feature
 - [ ] Photo Remaster
 - [ ] 24h-AI Timelapse
+- [ ] Volume Monitor
 
 After these features, oneCompleter won't receive any more features. Between major updates there will be only maintenance updates. 
 
