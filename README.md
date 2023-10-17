@@ -43,13 +43,13 @@ Since One UI 5.1.1, many features have been integrated in stock firmware and hav
 - ✅️ Two-line boot animation (used in 2021 and older devices) 
 - ✅️ Tablet as Second screen
 - ✅️ Highlight video maker
+- ✅️ Extra Dim
 
 ## Next Updates
 - [ ] Photo Remaster
 - [ ] 24h-AI Timelapse
 
 ## Maybe...
-- Extra Dim
 - Volume Monitor
 
 After these features, oneCompleter won't receive any more features. Between major updates there will be only maintenance updates. 
