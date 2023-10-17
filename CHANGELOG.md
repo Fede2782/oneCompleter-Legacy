@@ -3,8 +3,8 @@
 
 Make sure you have **at least** 1GB free of storage
 
-## v4.2.0
-- Add Volume Monitor
+## v4.2.1
+- Add Extra Dim
 
 ## v4.1.0
 - Bug fixes and improved performance by removing module's not necessary services
