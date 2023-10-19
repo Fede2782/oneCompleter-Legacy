@@ -3,7 +3,7 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXU7FWH7" || "$(getprop ro.build.PDA)" == "P610XXU4FWH7" ]]; then
+if [[ "$(getprop ro.build.PDA)" == "P615XXU7FWJ1" || "$(getprop ro.build.PDA)" == "P610XXU4FWJ1" ]]; then
     ui_print "Supported software version: $(getprop ro.build.PDA)"
 else
     ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
