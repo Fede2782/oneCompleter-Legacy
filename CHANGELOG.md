@@ -1,7 +1,12 @@
 
 # oneCompleter Changelog
 
-Make sure you have **at least** 1GB free of storage
+You must have **at least** 1GB free of storage
+
+## v4.3.0
+- Make Samsung Health available in Galaxy Store
+
+You still need a module to patch Samsung Health like BlackMesa123's KnoxPatch. Moreover, make sure Galaxy Store is not in Magisk denylist
 
 ## v4.2.1
 - Add Extra Dim
