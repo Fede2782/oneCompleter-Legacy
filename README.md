@@ -12,7 +12,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 
 ## Requirements:
 - Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
-- Latest Magisk
+- Latest Magisk and Zygisk Enabled
 - FWJ1 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with magisk or other methods)
 - 1GB of free storage (2GB recommended)
@@ -44,13 +44,12 @@ Since One UI 5.1.1, many features have been integrated in stock firmware and hav
 - ✅️ Tablet as Second screen
 - ✅️ Highlight video maker
 - ✅️ Extra Dim
+- ✅️ Samsung Health available in Galaxy Store
 
-## Working on...
+## Maybe...
 - [ ] Photo Remaster
 - [ ] 24h-AI Timelapse
 - [ ] Volume Monitor
-
-After these features, oneCompleter won't receive any more features. Between major updates there will be only maintenance updates. 
 
 
 ## Other Info
