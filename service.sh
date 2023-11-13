@@ -1,5 +1,8 @@
 qsettings=$(settings get secure sysui_qs_tiles)
 
+cmd device_config put activity_manager max_cached_processes 1024
+cmd device_config put activity_manager max_empty_time_millis 43200000
+
 pm disable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.settings.DisableSecondScreenActivity
 pm disable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.startup.StartupJobService
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.player.SecondScreenActivity
