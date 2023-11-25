@@ -1,8 +1,8 @@
 id=onecompleter
 name=oneCompleter (Tab S6 Lite LTE)
-version=v4.3.0
-versionCode=43000
+version=v4.3.1
+versionCode=43010
 author=fede2782
-description=A module that tries to add missing features of One UI to Galaxy Tab S6 Lite (P610/5, OXM, FWJ1)
+description=A module that tries to add missing features of One UI to Galaxy Tab S6 Lite (P610/5, OXM, FWK1)
 updateJson=https://raw.githubusercontent.com/Fede2782/oneCompleter/stable/update.json
 
