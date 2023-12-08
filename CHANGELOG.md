@@ -3,6 +3,11 @@
 
 You must have **at least** 1GB free of storage
 
+## v4.3.2
+- Fix issues when being used with Play Integrity Fix modules
+- Bug fixes
+
+
 ## v4.3.0
 - Make Samsung Health available in Galaxy Store
 
