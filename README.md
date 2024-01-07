@@ -16,7 +16,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 - FWK1 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with Magisk or other methods)
 - 1GB of free storage (2GB recommended)
-- Internet Connection (not necessary if using offline installer)
+- Internet Connection
 
 ## Credits
 These amazing features were created by Samsung. None of this would have been possible if Samsung hadn't created these features.
