@@ -32,7 +32,7 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 
 - ✅️ Object/Shadow/Reflection eraser
 - ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
-- ✅️ Smart Suggestions Widget 
+- ✅️ Smart Suggestions Widget (thanks to BlackMesa123)
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
 - ✅️ Samsung Tag Service 
