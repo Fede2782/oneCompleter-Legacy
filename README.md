@@ -51,8 +51,6 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 Never disable this module because it may create big issues in the system. In this case, install again the module. If you have booted in Safe Mode you should reinstall it too. Never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
 
 ## Maybe...
-- [ ] Photo Remaster
-- [ ] 24h-AI Timelapse
 - [ ] Volume Monitor
 
 
