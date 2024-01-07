@@ -8,15 +8,5 @@
         <component class=".player.SecondScreenActivity" enabled="true" />
     </component-override>
 
-    <component-override package="com.samsung.android.smartsuggestions">
-        <component class="com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider" enabled="true" />
-        <component class="com.samsung.android.smartsuggestions.startup.StartupJobService" enabled="false" />
-    </component-override>
-
-    <component-override package="com.samsung.android.forest">
-        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorActivity" enabled="true" />
-        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorOnboardingActivity" enabled="true" />
-        <component class="com.samsung.android.forest.volume.ui.VolumeMonitorSettingActivity" enabled="true" />
-    </component-override>
 </config>
 

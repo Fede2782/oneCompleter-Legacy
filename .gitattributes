@@ -1,0 +1,12 @@
+*.apk binary
+*.apex binary
+*.bin binary
+*.so binary
+*.jar binary
+*.pk8 binary
+*.ogg binary
+*.ico binary
+*.jpg binary
+*.png binary
+*.webp binary
+

@@ -1,18 +1,10 @@
 qsettings=$(settings get secure sysui_qs_tiles)
 
-cmd device_config put activity_manager max_cached_processes 1024
-cmd device_config put activity_manager max_empty_time_millis 43200000
-
 pm disable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.settings.DisableSecondScreenActivity
-pm disable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.startup.StartupJobService
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.tile.ScreenSharingTile
-pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider
 pm enable com.samsung.android.smartmirroring/.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/.tile.ScreenSharingTile
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorSettingActivity
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorOnboardingActivity
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorActivity
 
 ui_print "- Adding Second Screen tile in Quick Settings..."
 ui_print "- If you remove it you may have to install again the module (you don't need to uninstall it first)"
@@ -22,5 +14,3 @@ else
   # Add your additional actions here
   settings put secure sysui_qs_tiles "$qsettings,custom(com.samsung.android.smartmirroring/.tile.ScreenSharingTile)"
 fi
-
-#watch -n 15 pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider >> /dev/null
