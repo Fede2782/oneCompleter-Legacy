@@ -3,7 +3,7 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXS7FWK1" || "$(getprop ro.build.PDA)" == "P610XXS4FWK1" ]]; then
+if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
     ui_print "Supported software version: $(getprop ro.build.PDA)"
 else
     ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
@@ -101,6 +101,10 @@ else
   # Add your additional actions here
   settings put secure sysui_qs_tiles "$qsettings,custom(com.samsung.android.smartmirroring/.tile.ScreenSharingTile)"
 fi
+
+REPLACE="
+/system/priv-app/PhotoEditor_Mid
+"
 
 ui_print "- Now clearing temp files and system cache to make everything working..."
 rm -rf /data/system/package_cache/*
