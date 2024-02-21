@@ -102,8 +102,9 @@ else
   settings put secure sysui_qs_tiles "$qsettings,custom(com.samsung.android.smartmirroring/.tile.ScreenSharingTile)"
 fi
 
-REPLACE="
+REMOVE="
 /system/priv-app/PhotoEditor_Mid
+/system/app/SamsungWeather/SamsungWeather.apk.prof
 "
 
 ui_print "- Now clearing temp files and system cache to make everything working..."
