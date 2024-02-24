@@ -5,7 +5,7 @@ pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.tile.ScreenSharingTile
 pm enable com.samsung.android.smartmirroring/.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/.tile.ScreenSharingTile
-pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProfile
+pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider
 
 ui_print "- Adding Second Screen tile in Quick Settings..."
 ui_print "- If you remove it you may have to install again the module (you don't need to uninstall it first)"
