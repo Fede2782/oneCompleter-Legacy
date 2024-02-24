@@ -83,15 +83,11 @@ chmod +x $MODPATH/service.sh
 qsettings=$(settings get secure sysui_qs_tiles)
 
 pm disable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.settings.DisableSecondScreenActivity
-pm disable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.startup.StartupJobService
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.tile.ScreenSharingTile
 pm enable com.samsung.android.smartsuggestions/com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider
 pm enable com.samsung.android.smartmirroring/.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/.tile.ScreenSharingTile
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorSettingActivity
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorOnboardingActivity
-pm enable com.samsung.android.forest/com.samsung.android.forest.volume.ui.VolumeMonitorActivity
 
 ui_print "- Adding Second Screen tile in Quick Settings..."
 ui_print "- If you remove it you may have to install again the module (you don't need to uninstall it first)"
