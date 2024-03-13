@@ -41,6 +41,7 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 - ✅️ Styles feature in Photo Editor 
 - ✅️ Two-line boot animation (used in 2021 and older devices) 
 - ✅️ Tablet as Second screen
+- ✅️ High End animations in stock launcher
 - ✅️ Highlight video maker
 - ✅️ Extra Dim
 - ✅️ Samsung Health available in Galaxy Store*
