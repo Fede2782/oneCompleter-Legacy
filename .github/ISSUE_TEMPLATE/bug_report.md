@@ -5,10 +5,9 @@ title: ""
 labels: "bug"
 ---
 
-Device name:
-Rom name:
-Android version:
-Pixelify version:
+OneUI Rom name (if different from stock):
+Android/OneUI version:
+oneCompleter version:
 
 <!-- About the bug -->
 Bug Description:
