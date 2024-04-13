@@ -8,3 +8,14 @@ sepolicy.rule text eol=lf
 # Denote all files that are truly binary and should not be modified.
 system/** binary
 system_x86/** binary
+*.apk binary
+*.apex binary
+*.bin binary
+*.so binary
+*.jar binary
+*.pk8 binary
+*.ogg binary
+*.ico binary
+*.jpg binary
+*.png binary
+*.webp binary
