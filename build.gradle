@@ -1,0 +1,32 @@
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'idea'
+    id 'com.android.application' version "8.3.0" apply false
+}
+
+idea.module {
+    excludeDirs += file('out')
+    resourceDirs += file('template')
+    resourceDirs += file('scripts')
+}
+
+ext {
+    min_sdk = 23
+    target_sdk = 34
+    minSdkVersion = 23
+    targetSdkVersion = 34
+    buildToolsVersion = '34.0.0'
+    ndkVersion = '26.1.10909125'
+    outDir = file("$rootDir/out")
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir, outDir
+}

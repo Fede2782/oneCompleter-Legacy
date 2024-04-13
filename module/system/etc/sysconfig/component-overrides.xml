@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <component-override package="com.samsung.android.smartmirroring">
+        <component class="com.samsung.android.smartmirroring.settings.DisableSecondScreenActivity" enabled="false" />
+        <component class="com.samsung.android.smartmirroring.player.SecondScreenActivity" enabled="true" />
+        <component class="com.samsung.android.smartmirroring.tile.ScreenSharingTile" enabled="true" />
+        <component class=".tile.ScreenSharingTile" enabled="true" />
+        <component class=".player.SecondScreenActivity" enabled="true" />
+    </component-override>
+
+</config>
+
