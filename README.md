@@ -36,7 +36,6 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
 - ✅️ Samsung Tag Service 
-- ✅️ AR Emoji Features 
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
 - ✅️ Two-line boot animation (used in 2021 and older devices) 
