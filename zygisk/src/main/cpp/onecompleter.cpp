@@ -15,14 +15,14 @@ using zygisk::ServerSpecializeArgs;
 #define CLASSES_DEX "/data/adb/modules/onecompleter/classes.dex"
 
 // Spoofing apps
-static std::vector<std::string> P1 = {"com.google.android.apps.photos"};
-static std::vector<std::string> P5 = {"com.google", "com.google.android.dialer", "com.google.android.tts", "com.google.android.apps.wearables.maestro.companion", "com.nothing.smartcenter", "com.netflix.mediaclient", "com.google.process.gapps", "com.google.process.gservices"};
+static std::vector<std::string> P1 = {};
+static std::vector<std::string> P5 = {};
 static std::vector<std::string> P6 = {};
-static std::vector<std::string> P7 = {};
-static std::vector<std::string> P8 = {"com.google.android.gms","com.android.vending", "com.google.android.aicore", "com.google.pixel.livewallpaper", "com.google.android.apps.subscriptions.red", "com.snapchat.android", "com.google.android.googlequicksearchbox", "com.adobe.lrmobile", "com.google.android.apps.recorder", "com.google.android.wallpaper.effects", "com.google.android.apps.customization.pixel"};
+static std::vector<std::string> P7 = {"com.google.android.apps.messaging"};
+static std::vector<std::string> P8 = {};
 static std::vector<std::string> PFold = {"com.google.android.apps.subscriptions.red"};
-static std::vector<std::string> S23U = {"com.samsung."};
-static std::vector<std::string> keep = {"com.google.vr.apps.ornament", "com.google.android.apps.nexuslauncher", "com.google.android.apps.pixelmigrate", "com.google.android.apps.restore", "com.google.android.apps.tachyon", "com.google.android.apps.tycho", "com.google.android.euicc", "com.google.oslo", "com.google.ar.core", "com.google.android.apps.recorder", "com.google.android.GoogleCamera", "com.google.android.apps.motionsense.bridge", "com.google.android.gms.chimera", "com.google.android.gms.update", "com.android.camera", "com.google.android.xx", "com.google.android.googlequicksearchbox:HotwordDetectionService", "com.google.android.apps.mesagging:rcs", "com.google.android.googlequicksearchbox:trusted:com.google.android.apps.gsa.hotword.hotworddetectionservice.GsaHotwordDetectionService", "com.google.android.gms.unstable"};
+static std::vector<std::string> S9U = {"com.sec.android.app.samsungapps", "com.samsung.android.smartsuggestions", "com.samsung.android.smartmirroring"};
+static std::vector<std::string> keep = {};
 
 // Fingerprint
 const char P1_FP[256] = "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys";
@@ -32,10 +32,10 @@ const char P7_FP[256] = "google/husky/husky:14/UD1A.230803.022.A3/10714844:user/
 const char P2_FP[256] = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys";
 const char PF_FP[256] = "google/felix/felix:13/TD3A.230203.070.A1/10075871:user/release-keys";
 const char P8_FP[256] = "google/husky/husky:14/AP1A.240305.019.A1/11445699:user/release-keys";
-const char S23U_FP[256] = "samsung/dm3qxxx/qssi:14/UP1A.231005.007/S918BXXS3BXBD:user/release-keys";
+const char S9U_FP[256] = "samsung/gts9uxxx/qssi:13/TP1A.220624.014/X916BXXU1AWG1:user/release-keys";
 
 // Classes.dex Inject packages
-static std::vector<std::string> InjectPackages = {"com.google.android.gms", "com.google.android.apps.photos", "com.google.android.googlequicksearchbox", "com.android.vending"};
+static std::vector<std::string> InjectPackages = {};
 
 class onecompleter : public zygisk::ModuleBase
 {
@@ -142,10 +142,10 @@ public:
         case 8:
             BRAND = "samsung";
             MANUFACTURER = "samsung";
-            PRODUCT = "dm3qxxx";
+            PRODUCT = "gts9uxxx";
             DEVICE = "qssi";
-            MODEL = "SM-S918B";
-            FINGERPRINT = S23U_FP;
+            MODEL = "SM-X916B";
+            FINGERPRINT = S9U_FP;
             break;
         default:
             api->setOption(zygisk::DLCLOSE_MODULE_LIBRARY);
@@ -330,7 +330,7 @@ private:
             if (package.find(s) != std::string::npos)
                 return 4;
         }
-        for (auto &s : S23U)
+        for (auto &s : S9U)
         {
             if (package.find(s) != std::string::npos)
                 return 8;
