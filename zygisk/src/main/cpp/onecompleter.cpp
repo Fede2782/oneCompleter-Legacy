@@ -20,7 +20,7 @@ static std::vector<std::string> P5 = {};
 static std::vector<std::string> P6 = {};
 static std::vector<std::string> P7 = {"com.google.android.apps.messaging"};
 static std::vector<std::string> P8 = {};
-static std::vector<std::string> PFold = {"com.google.android.apps.subscriptions.red"};
+static std::vector<std::string> PFold = {};
 static std::vector<std::string> S9U = {"com.sec.android.app.samsungapps", "com.samsung.android.smartsuggestions", "com.samsung.android.smartmirroring"};
 static std::vector<std::string> keep = {};
 
