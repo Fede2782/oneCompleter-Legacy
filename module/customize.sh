@@ -3,13 +3,13 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
-    ui_print "Supported software version: $(getprop ro.build.PDA)"
-else
-    ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
-    ui_print "P615XXU7FWH7 or P610XXU4FH7 required for this module's version"
-    abort
-fi
+#if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
+#    ui_print "Supported software version: $(getprop ro.build.PDA)"
+#else
+#    ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
+#    ui_print "P615XXU7FWH7 or P610XXU4FH7 required for this module's version"
+#    abort
+#fi
 
 ui_print "- Extracting module files..."
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH
@@ -58,6 +58,60 @@ tar -xvf $MODPATH/tmp/PhotoEditor_Full.tar.gz -C $MODPATH/system/priv-app/PhotoE
 #    rm $MODPATH/system/etc/floating_feature_p610.xml
 #    rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
 #fi
+
+ui_print "- Configuring Floating Feature..."
+SET_CONFIG()
+{
+    local CONFIG="$1"
+    local VALUE="$2"
+    local FILE="$MODPATH/system/etc/floating_feature.xml"
+
+    [ -e "$FILE" ] || cp "/system/etc/floating_feature.xml "$FILE"
+    
+    if [[ "$2" == "-d" ]] || [[ "$2" == "--delete" ]]; then
+        CONFIG="$(echo -n "$CONFIG" | sed 's/=//g')"
+        if grep -Fq "$CONFIG" "$FILE"; then
+            ui_print "Deleting \"$CONFIG\" config in /system/system/etc/floating_feature.xml"
+            sed -i "/$CONFIG/d" "$FILE"
+        fi
+    else
+        if grep -Fq "<$CONFIG>" "$FILE"; then
+            ui_print "Replacing \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
+            sed -i "$(sed -n "/<${CONFIG}>/=" "$FILE") c\ \ \ \ <${CONFIG}>${VALUE}</${CONFIG}>" "$FILE"
+        else
+            ui_print "Adding \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
+            sed -i "/<\/SecFloatingFeatureSet>/d" "$FILE"
+            if ! grep -q "Added by unica" "$FILE"; then
+                echo "    <!-- Added by unica/patches/floating_feature/customize.sh -->" >> "$FILE"
+            fi
+            echo "    <${CONFIG}>${VALUE}</${CONFIG}>" >> "$FILE"
+            echo "</SecFloatingFeatureSet>" >> "$FILE"
+        fi
+    fi
+}
+
+READ_AND_APPLY_CONFIGS()
+{
+    local CONFIG_FILE="$MODPATH/sff.sh"
+
+    if [ -f "$CONFIG_FILE" ]; then
+        while read -r i; do
+            [[ "$i" = "#"* ]] && continue
+            [[ -z "$i" ]] && continue
+
+            if [[ "$i" == *"delete" ]] || [[ -z "$(echo -n "$i" | cut -d "=" -f 2)" ]]; then
+                SET_CONFIG "$(echo -n "$i" | cut -d " " -f 1)" --delete
+            elif echo -n "$i" | grep -q "="; then
+                SET_CONFIG "$(echo -n "$i" | cut -d "=" -f 1)" "$(echo -n "$i" | cut -d "=" -f2-)"
+            else
+                echo "Malformed string in $MODPATH/sff.sh: \"$i\""
+                return 1
+            fi
+        done < "$CONFIG_FILE"
+    fi
+}
+
+rm $MODPATH/sff.sh
 
 ui_print "- Finishing the last things..."
 chmod +x $MODPATH/service.sh
