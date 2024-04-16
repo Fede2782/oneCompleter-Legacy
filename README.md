@@ -13,7 +13,6 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 ## Requirements:
 - One UI 5.1 or One UI 5.1.1 device with One UI (One UI Core not supported)
 - Latest Magisk with Zygisk enabled
-- FXA1 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with Magisk/KernelSU or other methods)
 - 1GB of free storage (2GB recommended)
 - Internet Connection
@@ -21,7 +20,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 ## Credits
 These amazing features were created by Samsung. None of this would have been possible if Samsung hadn't created these features.
 
-Pixelify for the Zygisk spoofing implementation
+Pixelify for the Zygisk spoofing implementation. BlackMesa123 for floating feature script.
 
 ## 💡Little tip
 
