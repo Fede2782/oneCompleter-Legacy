@@ -121,14 +121,14 @@ elif [[ $IMAGE_CLIPPER == "1" ]]; then
 fi
 
 ui_print "- Configuring Floating Feature..."
-cp /system/etc/floating_feature.xml "$MODPATH/system/etc/floating_feature.xml"
+#cp /system/etc/floating_feature.xml "$MODPATH/system/etc/floating_feature.xml"
 SET_CONFIG()
 {
     local CONFIG="$1"
     local VALUE="$2"
     local FILE="$MODPATH/system/etc/floating_feature.xml"
 
-    [ -e "$FILE" ] || cp "/system/etc/floating_feature.xml "$FILE"
+    [ -e "$FILE" ] || cp "/system/etc/floating_feature.xml" "$FILE"
     
     if [[ "$2" == "-d" ]] || [[ "$2" == "--delete" ]]; then
         CONFIG="$(echo -n "$CONFIG" | sed 's/=//g')"
