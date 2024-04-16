@@ -12,8 +12,8 @@ ext {
     */
     moduleName = "oneCompleter"
     moduleAuthor = "Fede2782"
-    moduleDescription = "Enable missing OneUI features on Galaxy Tab S6 Lite (2020)"
-    moduleVersion = "v4.6"
-    moduleVersionCode = 406000
+    moduleDescription = "Enable missing OneUI features on Samsung devices"
+    moduleVersion = "v5.0.0"
+    moduleVersionCode = 500000
     magiskModuleId = "onecompleter"
 }

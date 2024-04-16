@@ -3,63 +3,125 @@ MINAPI=33
 
 SKIPUNZIP=1
 
-#if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
-#    ui_print "Supported software version: $(getprop ro.build.PDA)"
-#else
-#    ui_print "Unsupported device or version: $(getprop ro.build.PDA)"
-#    ui_print "P615XXU7FWH7 or P610XXU4FH7 required for this module's version"
-#    abort
-#fi
+if [[ "$(getprop ro.system.product.cpu.abilist64)" == *"arm64-v8a"* ]]; then
+    ui_print "- Supported architecture: $(getprop ro.system.product.cpu.abilist64)"
+else
+    ui_print "Unsupported architecture: $(getprop ro.system.product.cpu.abilist)"
+    ui_print "64-bit Android required for this module."
+    abort
+fi
+
+if [[ "$(getprop ro.build.version.oneui)" == "50101" || "$(getprop ro.build.version.oneui)" == "50100" ]]; then
+    ui_print "- Supported One UI version"
+else
+    ui_print "Unsupported One UI version: $(getprop ro.build.version.oneui)"
+    ui_print "One UI 5.1 (50100) or OneUI 5.1.1 (50101) required for this module's version"
+    abort
+fi
+
+if grep -q "sep_lite" "/system/etc/floating_feature.xml"; then
+    ui_print "One UI Core devices are not supported"
+    abort
+else
+    if [[ ! -e "/system/lib64/libBeauty_v4.camera.samsung.so" ]]; then
+        ui_print "One UI Core devices are not supported"
+        abort
+    fi
+    ui_print "- Supported One UI edition"
+fi
 
 ui_print "- Extracting module files..."
-unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH
+unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >> /dev/null
 mkdir $MODPATH/zygisk
 mv $MODPATH/lib/zygisk/* $MODPATH/zygisk/
 rm -rf $MODPATH/lib
+
+ui_print "- Loading configuration..."
+source $MODPATH/config.sh
+if [ -e /sdcard/onecompleter/config.sh ]; then
+    source /sdcard/onecompleter/config.sh
+    ui_print "- Loading configuration in /sdcard/onecompleter/config.sh"
+elif [ -e /sdcard/onecompleter/config.sh ]; then
+    source /data/adb/modules/onecompleter/config.sh
+    ui_print "- Loading previous configuration"
+    ui_print "- If you have not customized anything before the default one will be used"
+else
+    ui_print "- Using default configuration"
+fi
 
 ui_print "- Creating temp directory..."
 mkdir $MODPATH/tmp
 
 ui_print "- Installing large apps..."
-
-#REMOTE vers
-#SmartSuggestions 5.2.00.66
-
 mkdir $MODPATH/system/app/
 mkdir $MODPATH/system/priv-app/
 
-ui_print "- Installing Camera Kit by Snapchat (for fun mode)..."
-wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
-mkdir $MODPATH/system/app/FunModeSDK/
-tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
+if [[ $FUN_MODE == "1" ]]; then
+	ui_print "- Installing Camera Kit by Snapchat (for fun mode)..."
+	wget -O $MODPATH/tmp/FunModeSDK.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/FunModeSDK.tar.gz"
+	mkdir $MODPATH/system/app/FunModeSDK/
+	tar -xvf $MODPATH/tmp/FunModeSDK.tar.gz -C $MODPATH/system/app/FunModeSDK/
+    mkdir $MODPATH/system/cameradata
+    cp /system/cameradata/camera-feature.xml "$MODPATH/system/cameradata/camera-feature.xml"
+    if grep -q 'SHOOTING_MODE_FUN' input_file.xml; then
+        ui_print "- - Fun Mode configuration in camera-feature.xml already present."
+        ui_print "- - This means you do not need this feature enabled by oneCompleter or your setup is broken or modifed by other modules."
+    else
+        sed -i '/<resources>/a \    <local name="SHOOTING_MODE_FUN" back="FUN" front="FUN" enable="false" more="false" order="4" />' "$MODPATH/system/cameradata/camera-feature.xml"
+    fi
+else
+    ui_print "- Skipping Fun Mode installation"
+fi
 
-ui_print "- Installing AI models for Styles and Erasers in Photo Editor..."
-wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
-tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
+if [[ $AI_ERASERS == "1" ]]; then
+	ui_print "- Installing AI models for Styles and Erasers in Photo Editor..."
+	wget -O $MODPATH/tmp/EditorFiles.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/EditorFiles.tar.gz"
+	tar -xvf $MODPATH/tmp/EditorFiles.tar.gz -C $MODPATH/system/etc/
+    if [[ $PHOTO_EDITOR == "0" ]]; then
+        ui_print "- - Full Photo Editor installation has been disabled"
+        ui_print "- - You may not be able to use Styles and Erasers feature..."
+    fi
+else
+    ui_print "- Skipping AI models for Styles and Erasers in Photo Editor installation"
+fi
 
-ui_print "- Installing HashTag Service..."
-wget -O $MODPATH/tmp/HashTagService.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/HashTagService.tar.gz"
-mkdir $MODPATH/system/priv-app/HashTagService
-tar -xvf $MODPATH/tmp/HashTagService.tar.gz -C $MODPATH/system/priv-app/HashTagService/
+if [[ $AI_TAGGER == "1" ]] && [[ ! -e /system/priv-app/HashTagService/oat/arm64/HashTagService.odex ]]; then
+	ui_print "- Installing HashTag Service..."
+	wget -O $MODPATH/tmp/HashTagService.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/HashTagService.tar.gz"
+	mkdir $MODPATH/system/priv-app/HashTagService
+	tar -xvf $MODPATH/tmp/HashTagService.tar.gz -C $MODPATH/system/priv-app/HashTagService/
+else
+    ui_print "- Skipping HashTag installation"
+fi
 
-ui_print "- Installing Full Photo Editor..."
-wget -O $MODPATH/tmp/PhotoEditor_Full.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/PhotoEditor_Full.tar.gz"
-mkdir $MODPATH/system/priv-app/PhotoEditor_Full
-tar -xvf $MODPATH/tmp/PhotoEditor_Full.tar.gz -C $MODPATH/system/priv-app/PhotoEditor_Full/
+if [[ $PHOTO_EDITOR == "1" ]]; then
+	ui_print "- Installing Full Photo Editor..."
+	wget -O $MODPATH/tmp/PhotoEditor_Full.tar.gz "https://gitlab.com/Fede2782/onecompleter-files/-/raw/main/PhotoEditor_Full.tar.gz"
+	mkdir $MODPATH/system/priv-app/PhotoEditor_Full
+	tar -xvf $MODPATH/tmp/PhotoEditor_Full.tar.gz -C $MODPATH/system/priv-app/PhotoEditor_Full/
+    if [[ $AI_ERASERS == "0" ]]; then
+        ui_print "- - AI models for Styles and Erasers installation has been disabled"
+        ui_print "- - You may not be able to use Styles and Erasers feature..."
+    fi
+else
+    ui_print "- Skipping Full Photo Editor installation"
+fi
 
-#if [[ "$(getprop ro.build.PDA)" == "P610XXS3FWD2" ]]; then
-#    ui_print "- Found P610 model"
-#    ui_print "- Applying patch...."
-#    mv $MODPATH/system/etc/floating_feature_p610.xml $MODPATH/system/etc/floating_feature.xml
-#    mv $MODPATH/system/vendor/etc/floating_feature_p610.xml $MODPATH/system/vendor/etc/floating_feature.xml
-#else
-#    ui_print "- Found P615 model"
-#    ui_print "- Cleaning unused files..."
-#    rm $MODPATH/system/etc/floating_feature_p610.xml
-#    rm $MODPATH/system/vendor/etc/floating_feature_p610.xml
-#fi
+if [[ $IMAGE_CLIPPER == "0" ]]; then
+	ui_print "- Skipping Image Clipper in Gallery installation"
+	rm -rf $MODPATH/system/lib64
+	rm -rf $MODPATH/system/lib
+	#rm -rf $MODPATH/system/etc/public.libraries-arcsoft.txt
+elif [[ $IMAGE_CLIPPER == "1" ]]; then
+	ui_print "- Enabling Image Clipper in Gallery"
+	if ! grep -q "objectcapture" "/system/etc/public.libraries-arcsoft.txt"; then
+		echo "libobjectcapture.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
+                echo "libobjectcapture_jni.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
+	fi
+fi
 
 ui_print "- Configuring Floating Feature..."
+cp /system/etc/floating_feature.xml "$MODPATH/system/etc/floating_feature.xml"
 SET_CONFIG()
 {
     local CONFIG="$1"
@@ -81,8 +143,8 @@ SET_CONFIG()
         else
             ui_print "Adding \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
             sed -i "/<\/SecFloatingFeatureSet>/d" "$FILE"
-            if ! grep -q "Added by unica" "$FILE"; then
-                echo "    <!-- Added by unica/patches/floating_feature/customize.sh -->" >> "$FILE"
+            if ! grep -q "Added by oneCompleter" "$FILE"; then
+                echo "    <!-- Added by oneCompleter -->" >> "$FILE"
             fi
             echo "    <${CONFIG}>${VALUE}</${CONFIG}>" >> "$FILE"
             echo "</SecFloatingFeatureSet>" >> "$FILE"
@@ -111,7 +173,15 @@ READ_AND_APPLY_CONFIGS()
     fi
 }
 
+READ_AND_APPLY_CONFIGS
+
 rm $MODPATH/sff.sh
+
+if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
+    ui_print "Installing on Tab S6 Lite: $(getprop ro.build.PDA)"
+else
+    rm -rf $MODPATH/system/media
+fi
 
 ui_print "- Finishing the last things..."
 chmod +x $MODPATH/service.sh
@@ -126,7 +196,7 @@ pm enable com.samsung.android.smartmirroring/.player.SecondScreenActivity
 pm enable com.samsung.android.smartmirroring/.tile.ScreenSharingTile
 
 ui_print "- Adding Second Screen tile in Quick Settings..."
-ui_print "- If you remove it you may have to install again the module (you don't need to uninstall it first)"
+ui_print "- If you remove it you may have to install again the module, you do not need to uninstall it first"
 if [[ $qsettings == *"ScreenSharing"* ]]; then
   echo "The string contains 'ScreenSharing'. No further action needed." >> /dev/null
 else

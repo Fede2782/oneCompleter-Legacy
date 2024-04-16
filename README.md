@@ -6,12 +6,12 @@
 
 <img src="https://github.com/Fede2782/oneCompleter/blob/stable/img/Clipped_image_20230619_182601.png?raw=true"  width="15%" height="15%">
 
-Add missing One UI features to Tab S6 Lite and much more...
+Add missing One UI features to different devices and much more...
 
 You can flash this Magisk module at your own risk. I am not responsible for lost warranty, bootloops, lost data, or any other damage to your device.
 
 ## Requirements:
-- Samsung Galaxy Tab S6 Lite 2020 (SM-P610 and SM-P615)
+- One UI 5.1 or One UI 5.1.1 device with One UI (One UI Core not supported)
 - Latest Magisk with Zygisk enabled
 - FXA1 firmware under OXM Multi-CSC (depending on model)
 - Clean system (stock ROM, no modifications to stock ROM with Magisk/KernelSU or other methods)
@@ -38,7 +38,7 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 - ✅️ Samsung Tag Service 
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
-- ✅️ Two-line boot animation (used in 2021 and older devices) 
+- ✅️ Two-line boot animation (used in 2021 and older devices)) only for Tab S6 Lite 2020
 - ✅️ Tablet as Second screen
 - ✅️ High End animations in stock launcher
 - ✅️ Highlight video maker
@@ -47,12 +47,11 @@ Since One UI 5.1.1, many features have been integrated with stock firmware and h
 
 *You still need a module to patch Samsung Health like [BlackMesa123's KnoxPatch](https://github.com/BlackMesa123/KnoxPatch/). Moreover, make sure Galaxy Store is not in Magisk denylist
 
+## Configuration
+You can configure the installation by editing the config.sh file inside the module.
+
 ## ⚠️ Uninstall/Disable and OS updates
 Never disable this module because it may create big issues in the system. In this case, install again the module. If you have booted in Safe Mode you should reinstall it too. Never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 
-
-## Maybe...
-- [ ] Volume Monitor
-
 
 ## Other Info
 Feel free to contribute if you have some ideas or ways to enable or add these features.
