@@ -114,6 +114,7 @@ if [[ $IMAGE_CLIPPER == "0" ]]; then
 	#rm -rf $MODPATH/system/etc/public.libraries-arcsoft.txt
 elif [[ $IMAGE_CLIPPER == "1" ]]; then
 	ui_print "- Enabling Image Clipper in Gallery"
+        cp /system/etc/public.libraries-arcsoft.txt $MODPATH/system/etc/public.libraries-arcsoft.txt
 	if ! grep -q "objectcapture" "/system/etc/public.libraries-arcsoft.txt"; then
 		echo "libobjectcapture.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
                 echo "libobjectcapture_jni.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
