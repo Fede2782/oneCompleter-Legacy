@@ -2,9 +2,7 @@
 
 ![Version](https://img.shields.io/github/v/release/Fede2782/oneCompleter?style=flat"/>)
 ![Size](https://img.shields.io/github/repo-size/Fede2782/oneCompleter?style=flat"/>)
-![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/stable?style=flat-square"/>)
-
-<img src="https://github.com/Fede2782/oneCompleter/blob/stable/img/Clipped_image_20230619_182601.png?raw=true"  width="15%" height="15%">
+![Commit](https://img.shields.io/github/last-commit/Fede2782/oneCompleter/master?style=flat-square"/>)
 
 Add missing One UI features to different devices and much more...
 
@@ -14,7 +12,7 @@ You can flash this Magisk module at your own risk. I am not responsible for lost
 - One UI 5.1 or One UI 5.1.1 device with One UI (One UI Core not supported)
 - Latest Magisk with Zygisk enabled
 - Clean system (stock ROM, no modifications to stock ROM with Magisk/KernelSU or other methods)
-- 1GB of free storage (2GB recommended)
+- 1GB of free storage
 - Internet Connection
 
 ## Credits
@@ -27,27 +25,25 @@ Pixelify for the Zygisk spoofing implementation. BlackMesa123 for floating featu
 This module installs some big apps and libs. I suggest you use Galaxy App Booster (Samsung official app of Good Guardians suite) after every big module update, so the tablet will not slow down. A "wipe cache" or "Repair apps" in Recovery may be useful in some cases. Moreover, make sure all apps are up-to-date before/after installing this module (Play Store and Galaxy Store).
 
 ## Features Now:
-Since One UI 5.1.1, many features have been integrated with stock firmware and have been removed from oneCompleter for better stability. One UI 5.1.1 improved performance so this module has been lightened to keep One UI 5.1.1 running smoothly, however, no features have been removed.
-
 - ✅️ Object/Shadow/Reflection eraser
-- ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/) 
+- ✅️ Image Clipper (thanks to ShaDisNX255/NcX-S21FE/)*¹
 - ✅️ Smart Suggestions Widget (thanks to BlackMesa123)
 - ✅️ Camera Privacy toggle 
 - ✅️ Google Discover feed 
 - ✅️ Samsung Tag Service 
 - ✅️ Camera fun mode
 - ✅️ Styles feature in Photo Editor 
-- ✅️ Two-line boot animation (used in 2021 and older devices)) only for Tab S6 Lite 2020
+- ✅️ Two-line boot animation*²
 - ✅️ Tablet as Second screen
 - ✅️ High End animations in stock launcher
 - ✅️ Highlight video maker
 - ✅️ Extra Dim
-- ✅️ Samsung Health available in Galaxy Store*
+- ✅️ Samsung Health available in Galaxy Store for tablets*³
 
-*You still need a module to patch Samsung Health like [BlackMesa123's KnoxPatch](https://github.com/BlackMesa123/KnoxPatch/). Moreover, make sure Galaxy Store is not in Magisk denylist
+*¹ Available only on Exynos 9611 devices. *² Available only on Tab S6 Lite 2020. *³ You still need a module to patch Samsung Health like [BlackMesa123's KnoxPatch](https://github.com/BlackMesa123/KnoxPatch/). Moreover, make sure Galaxy Store is not in Magisk/KernelSU denylist
 
 ## Configuration
-You can configure the installation by editing the config.sh file inside the module.
+You can configure the first installation by editing the config.sh file inside the module. 
 
 ## ⚠️ Uninstall/Disable and OS updates
 Never disable this module because it may create big issues in the system. In this case, install again the module. If you have booted in Safe Mode you should reinstall it too. Never update One UI/Android version (One UI 5 -> 5.1, Android 12 -> 13) with the module installed, uninstall the module before doing the update and then install it again. 

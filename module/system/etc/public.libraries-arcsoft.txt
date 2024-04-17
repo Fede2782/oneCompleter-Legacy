@@ -1,0 +1,6 @@
+libface_landmark.arcsoft.so
+libFacialStickerEngine.arcsoft.so
+liblow_light_hdr.arcsoft.so
+libhigh_dynamic_range.arcsoft.so
+libobjectcapture.arcsoft.so
+libobjectcapture_jni.arcsoft.so

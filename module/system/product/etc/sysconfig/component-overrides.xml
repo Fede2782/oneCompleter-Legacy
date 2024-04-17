@@ -8,5 +8,8 @@
         <component class=".player.SecondScreenActivity" enabled="true" />
     </component-override>
 
+    <component-override package="com.samsung.android.smartsuggestions">
+        <component class="com.samsung.android.smartsuggestions.widget.appwidget.SmartSuggestionsWidgetProvider" enabled="true" />
+    </component-override>
 </config>
 

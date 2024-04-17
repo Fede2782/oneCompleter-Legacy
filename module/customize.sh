@@ -107,18 +107,13 @@ else
     ui_print "- Skipping Full Photo Editor installation"
 fi
 
-if [[ $IMAGE_CLIPPER == "0" ]]; then
-	ui_print "- Skipping Image Clipper in Gallery installation"
+if [[ $IMAGE_CLIPPER == "1" ]] && [[ $(getprop ro.hardware) == "exynos9611" ]]; then
+	ui_print "- Enabling Image Clipper in Gallery"
+else
+	ui_print "- Skipping Image Clipper installation"
 	rm -rf $MODPATH/system/lib64
 	rm -rf $MODPATH/system/lib
-	#rm -rf $MODPATH/system/etc/public.libraries-arcsoft.txt
-elif [[ $IMAGE_CLIPPER == "1" ]]; then
-	ui_print "- Enabling Image Clipper in Gallery"
-        cp /system/etc/public.libraries-arcsoft.txt $MODPATH/system/etc/public.libraries-arcsoft.txt
-	if ! grep -q "objectcapture" "/system/etc/public.libraries-arcsoft.txt"; then
-		echo "libobjectcapture.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
-                echo "libobjectcapture_jni.so" >> $MODPATH/system/etc/public.libraries-arcsoft.txt
-	fi
+	rm -rf $MODPATH/system/etc/public.libraries-arcsoft.txt
 fi
 
 ui_print "- Configuring Floating Feature..."
