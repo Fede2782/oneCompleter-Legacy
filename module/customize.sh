@@ -30,6 +30,79 @@ else
     ui_print "- Supported One UI edition"
 fi
 
+if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
+    ui_print "Installing on Tab S6 Lite: $(getprop ro.build.PDA)"
+    2020_EDITION=true
+else
+    rm -rf $MODPATH/system/media
+fi
+
+SET_CONFIG()
+{
+    local CONFIG="$1"
+    local VALUE="$2"
+    local FILE="$MODPATH/system/etc/floating_feature.xml"
+
+    [ -e "$FILE" ] || cp "/system/etc/floating_feature.xml" "$FILE"
+    
+    if [[ "$2" == "-d" ]] || [[ "$2" == "--delete" ]]; then
+        CONFIG="$(echo -n "$CONFIG" | sed 's/=//g')"
+        if grep -Fq "$CONFIG" "$FILE"; then
+            ui_print "Deleting \"$CONFIG\" config in /system/system/etc/floating_feature.xml"
+            sed -i "/$CONFIG/d" "$FILE"
+        fi
+    else
+        if grep -Fq "<$CONFIG>" "$FILE"; then
+            ui_print "Replacing \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
+            sed -i "$(sed -n "/<${CONFIG}>/=" "$FILE") c\ \ \ \ <${CONFIG}>${VALUE}</${CONFIG}>" "$FILE"
+        else
+            ui_print "Adding \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
+            sed -i "/<\/SecFloatingFeatureSet>/d" "$FILE"
+            if ! grep -q "Added by oneCompleter" "$FILE"; then
+                echo "    <!-- Added by oneCompleter -->" >> "$FILE"
+            fi
+            echo "    <${CONFIG}>${VALUE}</${CONFIG}>" >> "$FILE"
+            echo "</SecFloatingFeatureSet>" >> "$FILE"
+        fi
+    fi
+}
+
+READ_AND_APPLY_CONFIGS()
+{
+    local CONFIG_FILE="$MODPATH/sff.sh"
+
+    if [ -f "$CONFIG_FILE" ]; then
+        while read -r i; do
+            [[ "$i" = "#"* ]] && continue
+            [[ -z "$i" ]] && continue
+
+            if [[ "$i" == *"delete" ]] || [[ -z "$(echo -n "$i" | cut -d "=" -f 2)" ]]; then
+                SET_CONFIG "$(echo -n "$i" | cut -d " " -f 1)" --delete
+            elif echo -n "$i" | grep -q "="; then
+                SET_CONFIG "$(echo -n "$i" | cut -d "=" -f 1)" "$(echo -n "$i" | cut -d "=" -f2-)"
+            else
+                echo "Malformed string in $MODPATH/sff.sh: \"$i\""
+                return 1
+            fi
+        done < "$CONFIG_FILE"
+    fi
+}
+
+# Wireless DeX support (requires a kernel with DeX touchpad input driver)
+kernel_fps=(
+    "Linux localhost 4.14.113-abP615XXS7FXA1-ksu #1 SMP PREEMPT Sat Apr 20 12:54:11 CEST 2024"
+)
+ksu_build=false
+for fp in "${kernel_fps[@]}"; do
+    if [[ $(uname -a) == *"$fp"* ]]; then
+        ksu_build=true
+        ui_print "Using supported kernel version $(uname -a)"
+        ui_print "Enabling wireless DeX"
+        SET_CONFIG "SEC_FLOATING_FEATURE_COMMON_CONFIG_DEX_MODE" "standalone,wireless"
+        break
+    fi
+done
+
 ui_print "- Extracting module files..."
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >> /dev/null
 mkdir $MODPATH/zygisk
@@ -117,67 +190,10 @@ else
 fi
 
 ui_print "- Configuring Floating Feature..."
-#cp /system/etc/floating_feature.xml "$MODPATH/system/etc/floating_feature.xml"
-SET_CONFIG()
-{
-    local CONFIG="$1"
-    local VALUE="$2"
-    local FILE="$MODPATH/system/etc/floating_feature.xml"
-
-    [ -e "$FILE" ] || cp "/system/etc/floating_feature.xml" "$FILE"
-    
-    if [[ "$2" == "-d" ]] || [[ "$2" == "--delete" ]]; then
-        CONFIG="$(echo -n "$CONFIG" | sed 's/=//g')"
-        if grep -Fq "$CONFIG" "$FILE"; then
-            ui_print "Deleting \"$CONFIG\" config in /system/system/etc/floating_feature.xml"
-            sed -i "/$CONFIG/d" "$FILE"
-        fi
-    else
-        if grep -Fq "<$CONFIG>" "$FILE"; then
-            ui_print "Replacing \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
-            sed -i "$(sed -n "/<${CONFIG}>/=" "$FILE") c\ \ \ \ <${CONFIG}>${VALUE}</${CONFIG}>" "$FILE"
-        else
-            ui_print "Adding \"$CONFIG\" config with \"$VALUE\" in /system/system/etc/floating_feature.xml"
-            sed -i "/<\/SecFloatingFeatureSet>/d" "$FILE"
-            if ! grep -q "Added by oneCompleter" "$FILE"; then
-                echo "    <!-- Added by oneCompleter -->" >> "$FILE"
-            fi
-            echo "    <${CONFIG}>${VALUE}</${CONFIG}>" >> "$FILE"
-            echo "</SecFloatingFeatureSet>" >> "$FILE"
-        fi
-    fi
-}
-
-READ_AND_APPLY_CONFIGS()
-{
-    local CONFIG_FILE="$MODPATH/sff.sh"
-
-    if [ -f "$CONFIG_FILE" ]; then
-        while read -r i; do
-            [[ "$i" = "#"* ]] && continue
-            [[ -z "$i" ]] && continue
-
-            if [[ "$i" == *"delete" ]] || [[ -z "$(echo -n "$i" | cut -d "=" -f 2)" ]]; then
-                SET_CONFIG "$(echo -n "$i" | cut -d " " -f 1)" --delete
-            elif echo -n "$i" | grep -q "="; then
-                SET_CONFIG "$(echo -n "$i" | cut -d "=" -f 1)" "$(echo -n "$i" | cut -d "=" -f2-)"
-            else
-                echo "Malformed string in $MODPATH/sff.sh: \"$i\""
-                return 1
-            fi
-        done < "$CONFIG_FILE"
-    fi
-}
 
 READ_AND_APPLY_CONFIGS
 
 rm $MODPATH/sff.sh
-
-if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
-    ui_print "Installing on Tab S6 Lite: $(getprop ro.build.PDA)"
-else
-    rm -rf $MODPATH/system/media
-fi
 
 ui_print "- Finishing the last things..."
 chmod +x $MODPATH/service.sh

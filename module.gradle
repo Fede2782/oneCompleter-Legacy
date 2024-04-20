@@ -13,7 +13,7 @@ ext {
     moduleName = "oneCompleter"
     moduleAuthor = "Fede2782"
     moduleDescription = "Enable missing OneUI features on Samsung devices"
-    moduleVersion = "v5.0.0-rc1"
-    moduleVersionCode = 500001
+    moduleVersion = "v5.1.0"
+    moduleVersionCode = 501000
     magiskModuleId = "onecompleter"
 }

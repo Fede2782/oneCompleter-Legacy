@@ -39,8 +39,9 @@ This module installs some big apps and libs. I suggest you use Galaxy App Booste
 - ✅️ Highlight video maker
 - ✅️ Extra Dim
 - ✅️ Samsung Health available in Galaxy Store for tablets*³
+- ✅️ Wireless DeX*⁴
 
-*¹ Available only on Exynos 9611 devices. *² Available only on Tab S6 Lite 2020. *³ You still need a module to patch Samsung Health like [BlackMesa123's KnoxPatch](https://github.com/BlackMesa123/KnoxPatch/). Moreover, make sure Galaxy Store is not in Magisk/KernelSU denylist
+*¹ Available only on Exynos 9611 devices. *² Available only on Tab S6 Lite 2020. *³ You still need a module to patch Samsung Health like [BlackMesa123's KnoxPatch](https://github.com/BlackMesa123/KnoxPatch/). Moreover, make sure Galaxy Store is not in Magisk/KernelSU denylist. *⁴ Requires a proper kernel support, at the moment will be enabled by default on Tab S6 Lite LTE 2020 when my KernelSU build is installed. Optional enablement using a flag will be supported in future version.  
 
 ## Configuration
 You can configure the first installation by editing the config.sh file inside the module. 
