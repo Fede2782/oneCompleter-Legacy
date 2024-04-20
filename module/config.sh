@@ -13,3 +13,7 @@ PHOTO_EDITOR=1
 # Image Clipper feature in Gallery
 # This will install generic Image Clipper blobs which may not work.
 IMAGE_CLIPPER=0
+
+# Wireless DeX
+# This feature requires proper kernel DeX input driver support
+WIRELESS_DEX=0

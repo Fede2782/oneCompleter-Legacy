@@ -88,21 +88,6 @@ READ_AND_APPLY_CONFIGS()
     fi
 }
 
-# Wireless DeX support (requires a kernel with DeX touchpad input driver)
-kernel_fps=(
-    "Linux localhost 4.14.113-abP615XXS7FXA1-ksu #1 SMP PREEMPT Sat Apr 20 12:54:11 CEST 2024"
-)
-ksu_build=false
-for fp in "${kernel_fps[@]}"; do
-    if [[ $(uname -a) == *"$fp"* ]]; then
-        ksu_build=true
-        ui_print "Using supported kernel version $(uname -a)"
-        ui_print "Enabling wireless DeX"
-        SET_CONFIG "SEC_FLOATING_FEATURE_COMMON_CONFIG_DEX_MODE" "standalone,wireless"
-        break
-    fi
-done
-
 ui_print "- Extracting module files..."
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >> /dev/null
 mkdir $MODPATH/zygisk
@@ -187,6 +172,12 @@ else
 	rm -rf $MODPATH/system/lib64
 	rm -rf $MODPATH/system/lib
 	rm -rf $MODPATH/system/etc/public.libraries-arcsoft.txt
+fi
+
+if [[ $WIRELESS_DEX == "1" ]]; then
+    ui_print "- Enabling Wireless DeX"
+    ui_print "- - This feature requires a kernel with DeX input driver"
+    SET_CONFIG "SEC_FLOATING_FEATURE_COMMON_CONFIG_DEX_MODE" "standalone,wireless"
 fi
 
 ui_print "- Configuring Floating Feature..."
