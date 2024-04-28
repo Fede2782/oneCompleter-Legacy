@@ -223,3 +223,6 @@ ui_print "- You'll see SecondScreen toggle after reboot in QuickSettings"
 ui_print ""
 ui_print "- Done!"
 ui_print ""
+if [[ $KSU == "true" ]]; then
+  ui_print "- Make sure that modules umount feature is disabled"
+fi
