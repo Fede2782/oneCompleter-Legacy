@@ -3,4 +3,5 @@ ro.product.device=gts9fe
 ro.com.google.cdb.spa1=bsxasm1
 ro.bbt.support.circle2search=true
 ro.com.google.clientidbase=android-samsung-ss
+wlan.wfd.hdcp=disable
 
