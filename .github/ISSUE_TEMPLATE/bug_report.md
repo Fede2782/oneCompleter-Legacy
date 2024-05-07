@@ -8,6 +8,7 @@ labels: "bug"
 OneUI Rom name (if different from stock):
 Android/OneUI version:
 oneCompleter version:
+Device:
 
 <!-- About the bug -->
 Bug Description:
