@@ -30,7 +30,7 @@ else
     ui_print "- Supported One UI edition"
 fi
 
-if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" ]]; then
+if [[ "$(getprop ro.build.PDA)" == "P615XXS7FXA1" || "$(getprop ro.build.PDA)" == "P610XXS4FXA1" || "$(getprop ro.build.PDA)" == "P615XXS8FXE4" || "$(getprop ro.build.PDA)" == "P610XXS5FXE4" ]]; then
     ui_print "Installing on Tab S6 Lite: $(getprop ro.build.PDA)"
     2020_EDITION=true
 else
